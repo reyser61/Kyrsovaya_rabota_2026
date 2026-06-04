@@ -1,0 +1,29 @@
+Subject: =?utf-8?b?0J/Qu9Cw0YLRkdC20L3QvtC1INC/0L7RgNGD0YfQtdC90LjQtQ==?=
+From: billing@account-verify.xyz
+To: buhgalter@corp-mail.ru
+Date: Thu, 04 Jun 2026 15:19:09 +0300
+Message-ID: <178057554918.21360.4288621622860676431@mail.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7566321320093486963=="
+
+--===============7566321320093486963==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+0JTQvtC60YPQvNC10L3RgiDQstC+INCy0LvQvtC20LXQvdC40LggKNCw0YDRhdC40LIpLiDQntGC
+0LrRgNC+0LnRgtC1INGE0LDQudC7INCy0L3Rg9GC0YDQuC4K
+
+--===============7566321320093486963==
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*0*=utf-8''%D0%9F%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%BD%D0%BE%D0%B5_;
+ filename*1*=%D0%BF%D0%BE%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.zip
+MIME-Version: 1.0
+
+UEsDBBQAAAgAAGR6xFxqXn9kHAAAABwAAAApAAAA0J/Qu9Cw0YLQtdC20L3QvtC1X9C/0L7RgNGD
+0YfQtdC90LjQtS5leGVNWpAAIGZha2UgcGF5bG9hZCBpbnNpZGUgemlwUEsBAhQAFAAACAAAZHrE
+XGpef2QcAAAAHAAAACkAAAAAAAAAAAAAAIABAAAAANCf0LvQsNGC0LXQttC90L7QtV/Qv9C+0YDR
+g9GH0LXQvdC40LUuZXhlUEsFBgAAAAABAAEAVwAAAGMAAAAAAA==
+
+--===============7566321320093486963==--

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Инцидент #{{ inc.id }} · MailGuard{% endblock %}
+{% block content %}
+
+<p><a href="{{ url_for('incidents') }}">← к списку инцидентов</a></p>
+
+<div class="detail-head sev-{{ inc.severity }}">
+  <h1>{{ inc.title }}</h1>
+  <div>
+    <span class="badge badge-{{ inc.severity }}">{{ inc.severity|sev_ru }}</span>
+    <span class="badge-soft">достоверность: {{ inc.confidence|conf_ru }}</span>
+    <span class="badge-soft">балл {{ inc.score }}</span>
+  </div>
+</div>
+
+{% if inc.summary %}<p class="lead">{{ inc.summary }}</p>{% endif %}
+
+<div class="grid-2">
+  <div class="panel">
+    <h2>Параметры</h2>
+    <table class="kv">
+      <tr><th>Категория</th><td>{{ inc.category|cat_ru }}</td></tr>
+      <tr><th>Источник лога</th><td><span class="origin">{{ inc.origin or '—' }}</span></td></tr>
+      <tr><th>Время</th><td class="mono">{{ inc.timestamp or '—' }}</td></tr>
+      <tr><th>Отправитель</th><td class="mono">{{ inc.evidence.get('from') or inc.source or '—' }}</td></tr>
+      {% if inc.evidence.get('to') %}
+      <tr><th>Получатели</th><td class="mono">{{ inc.evidence['to'] | join(', ') }}</td></tr>
+      {% endif %}
+      {% if inc.evidence.get('client_ip') %}
+      <tr><th>IP источника</th><td class="mono">{{ inc.evidence['client_ip'] }}</td></tr>
+      {% endif %}
+      {% if inc.evidence.get('subject') %}
+      <tr><th>Тема</th><td>{{ inc.evidence['subject'] }}</td></tr>
+      {% endif %}
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Сработавшие правила</h2>
+    {% if triggered %}
+      <ul class="rule-list">
+        {% for t in triggered %}
+          <li>
+            {% if t.exists %}
+              <a href="{{ url_for('rule_detail', rule_id=t.id) }}">{{ t.name }}</a>
+            {% else %}{{ t.name }}{% endif %}
+            <span class="mono small">({{ t.id }})</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}<p class="small">—</p>{% endif %}
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Почему сработало</h2>
+  {% if inc.evidence.get('reasons') %}
+    <ol class="reasons">
+      {% for r in inc.evidence['reasons'] %}<li>{{ r }}</li>{% endfor %}
+    </ol>
+  {% else %}
+    <p>{{ inc.description }}</p>
+  {% endif %}
+</div>
+
+{% if recommendation %}
+<div class="panel rec">
+  <h2>Рекомендация</h2>
+  <p>{{ recommendation }}</p>
+</div>
+{% endif %}
+
+<details class="panel">
+  <summary><b>Доказательная база (evidence)</b></summary>
+  <table class="kv">
+    {% for key, value in inc.evidence.items() %}
+      <tr><th>{{ key }}</th><td class="mono">
+        {% if value is mapping %}{{ value }}
+        {% elif value is iterable and value is not string %}{{ value | join(', ') }}
+        {% else %}{{ value }}{% endif %}
+      </td></tr>
+    {% endfor %}
+  </table>
+</details>
+
+{% endblock %}

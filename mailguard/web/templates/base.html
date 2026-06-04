@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}MailGuard{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🛡️ MailGuard <span>анализ почтовых логов</span></div>
+    <nav>
+      <a href="{{ url_for('dashboard') }}">Обзор</a>
+      <a href="{{ url_for('incidents') }}">Инциденты</a>
+      <a href="{{ url_for('incidents', category='phishing') }}">Фишинг</a>
+      <a href="{{ url_for('incidents', category='dlp') }}">Утечки</a>
+      <a href="{{ url_for('ioc') }}">IoC</a>
+      <a href="{{ url_for('blocklist') }}">Блок-лист</a>
+      <a href="{{ url_for('rules') }}">Правила</a>
+      <a href="{{ url_for('upload') }}">Загрузить</a>
+      <a href="{{ url_for('report', fmt='html') }}" target="_blank">Отчёт HTML</a>
+      <a href="{{ url_for('report', fmt='csv') }}">CSV</a>
+      <a href="{{ url_for('report', fmt='json') }}" target="_blank">JSON</a>
+    </nav>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flashes">
+        {% for cat, msg in messages %}
+          <div class="flash flash-{{ cat }}">{{ msg }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>MailGuard · курсовая работа · система выявления фишинга и утечек</footer>
+</body>
+</html>

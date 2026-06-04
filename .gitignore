@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Генерируемые системой артефакты
+data/mailguard.db
+data/rules_state.json
+data/cases/
+data/uploads/
+
+# Среды разработки / ОС
+.idea/
+.vscode/
+.claude/
+Thumbs.db
+.DS_Store

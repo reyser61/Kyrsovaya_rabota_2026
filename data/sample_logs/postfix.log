@@ -1,0 +1,667 @@
+Jun  4 09:02:00 mail postfix/smtpd[5506]: connect from mx0.partner.com[203.0.113.20]
+Jun  4 09:02:00 mail postfix/smtpd[5506]: 77432D1026: client=mx0.partner.com[203.0.113.20], helo=<mx0.partner.com>
+Jun  4 09:02:00 mail postfix/cleanup[5507]: 77432D1026: message-id=<77432d1026@mx0.partner.com>
+Jun  4 09:02:00 mail postfix/cleanup[5507]: 77432D1026: warning: header Subject: Договор на согласование from mx0.partner.com[203.0.113.20]
+Jun  4 09:02:00 mail opendmarc[5508]: 77432D1026: SPF(mailfrom): pass
+Jun  4 09:02:00 mail opendmarc[5508]: 77432D1026: DKIM: pass
+Jun  4 09:02:00 mail opendmarc[5508]: 77432D1026: DMARC: pass
+Jun  4 09:02:00 mail postfix/qmgr[5509]: 77432D1026: from=<manager0@partner.com>, size=202393, nrcpt=1 (queue active)
+Jun  4 09:02:00 mail postfix/smtp[5510]: 77432D1026: to=<user0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:04:00 mail postfix/smtpd[1434]: connect from mx1.gov-client.ru[203.0.113.21]
+Jun  4 09:04:00 mail postfix/smtpd[1434]: 6D7E805DA8: client=mx1.gov-client.ru[203.0.113.21], helo=<mx1.gov-client.ru>
+Jun  4 09:04:00 mail postfix/cleanup[1435]: 6D7E805DA8: message-id=<6d7e805da8@mx1.gov-client.ru>
+Jun  4 09:04:00 mail postfix/cleanup[1435]: 6D7E805DA8: warning: header Subject: Ответ на ваш запрос from mx1.gov-client.ru[203.0.113.21]
+Jun  4 09:04:00 mail opendmarc[1436]: 6D7E805DA8: SPF(mailfrom): pass
+Jun  4 09:04:00 mail opendmarc[1436]: 6D7E805DA8: DKIM: pass
+Jun  4 09:04:00 mail opendmarc[1436]: 6D7E805DA8: DMARC: pass
+Jun  4 09:04:00 mail postfix/qmgr[1437]: 6D7E805DA8: from=<manager1@gov-client.ru>, size=165815, nrcpt=1 (queue active)
+Jun  4 09:04:00 mail postfix/smtp[1438]: 6D7E805DA8: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:06:00 mail postfix/smtpd[6514]: connect from mx2.gov-client.ru[203.0.113.22]
+Jun  4 09:06:00 mail postfix/smtpd[6514]: 32C3BB81E3: client=mx2.gov-client.ru[203.0.113.22], helo=<mx2.gov-client.ru>
+Jun  4 09:06:00 mail postfix/cleanup[6515]: 32C3BB81E3: message-id=<32c3bb81e3@mx2.gov-client.ru>
+Jun  4 09:06:00 mail postfix/cleanup[6515]: 32C3BB81E3: warning: header Subject: Коммерческое предложение from mx2.gov-client.ru[203.0.113.22]
+Jun  4 09:06:00 mail opendmarc[6516]: 32C3BB81E3: SPF(mailfrom): pass
+Jun  4 09:06:00 mail opendmarc[6516]: 32C3BB81E3: DKIM: pass
+Jun  4 09:06:00 mail opendmarc[6516]: 32C3BB81E3: DMARC: pass
+Jun  4 09:06:00 mail postfix/qmgr[6517]: 32C3BB81E3: from=<manager2@gov-client.ru>, size=208145, nrcpt=1 (queue active)
+Jun  4 09:06:00 mail postfix/smtp[6518]: 32C3BB81E3: to=<user2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:08:00 mail postfix/smtpd[5803]: connect from mx3.logistics.example[203.0.113.23]
+Jun  4 09:08:00 mail postfix/smtpd[5803]: B62179273C: client=mx3.logistics.example[203.0.113.23], helo=<mx3.logistics.example>
+Jun  4 09:08:00 mail postfix/cleanup[5804]: B62179273C: message-id=<b62179273c@mx3.logistics.example>
+Jun  4 09:08:00 mail postfix/cleanup[5804]: B62179273C: warning: header Subject: Счёт-фактура за май from mx3.logistics.example[203.0.113.23]
+Jun  4 09:08:00 mail opendmarc[5805]: B62179273C: SPF(mailfrom): pass
+Jun  4 09:08:00 mail opendmarc[5805]: B62179273C: DKIM: pass
+Jun  4 09:08:00 mail opendmarc[5805]: B62179273C: DMARC: pass
+Jun  4 09:08:00 mail postfix/qmgr[5806]: B62179273C: from=<manager3@logistics.example>, size=152714, nrcpt=1 (queue active)
+Jun  4 09:08:00 mail postfix/smtp[5807]: B62179273C: to=<user3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:10:00 mail postfix/smtpd[6977]: connect from mx0.supplier.example[203.0.113.24]
+Jun  4 09:10:00 mail postfix/smtpd[6977]: 5BB682575E: client=mx0.supplier.example[203.0.113.24], helo=<mx0.supplier.example>
+Jun  4 09:10:00 mail postfix/cleanup[6978]: 5BB682575E: message-id=<5bb682575e@mx0.supplier.example>
+Jun  4 09:10:00 mail postfix/cleanup[6978]: 5BB682575E: warning: header Subject: Обновление прайс-листа from mx0.supplier.example[203.0.113.24]
+Jun  4 09:10:00 mail opendmarc[6979]: 5BB682575E: SPF(mailfrom): pass
+Jun  4 09:10:00 mail opendmarc[6979]: 5BB682575E: DKIM: pass
+Jun  4 09:10:00 mail opendmarc[6979]: 5BB682575E: DMARC: pass
+Jun  4 09:10:00 mail postfix/qmgr[6980]: 5BB682575E: from=<manager4@supplier.example>, size=174640, nrcpt=1 (queue active)
+Jun  4 09:10:00 mail postfix/smtp[6981]: 5BB682575E: to=<user4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:12:00 mail postfix/smtpd[4598]: connect from mx1.logistics.example[203.0.113.25]
+Jun  4 09:12:00 mail postfix/smtpd[4598]: A171AC826A: client=mx1.logistics.example[203.0.113.25], helo=<mx1.logistics.example>
+Jun  4 09:12:00 mail postfix/cleanup[4599]: A171AC826A: message-id=<a171ac826a@mx1.logistics.example>
+Jun  4 09:12:00 mail postfix/cleanup[4599]: A171AC826A: warning: header Subject: Акт выполненных работ from mx1.logistics.example[203.0.113.25]
+Jun  4 09:12:00 mail opendmarc[4600]: A171AC826A: SPF(mailfrom): pass
+Jun  4 09:12:00 mail opendmarc[4600]: A171AC826A: DKIM: pass
+Jun  4 09:12:00 mail opendmarc[4600]: A171AC826A: DMARC: pass
+Jun  4 09:12:00 mail postfix/qmgr[4601]: A171AC826A: from=<manager5@logistics.example>, size=175772, nrcpt=1 (queue active)
+Jun  4 09:12:00 mail postfix/smtp[4602]: A171AC826A: to=<user5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:14:00 mail postfix/smtpd[7482]: connect from mx2.gov-client.ru[203.0.113.26]
+Jun  4 09:14:00 mail postfix/smtpd[7482]: E48478DCB7: client=mx2.gov-client.ru[203.0.113.26], helo=<mx2.gov-client.ru>
+Jun  4 09:14:00 mail postfix/cleanup[7483]: E48478DCB7: message-id=<e48478dcb7@mx2.gov-client.ru>
+Jun  4 09:14:00 mail postfix/cleanup[7483]: E48478DCB7: warning: header Subject: График отгрузок from mx2.gov-client.ru[203.0.113.26]
+Jun  4 09:14:00 mail opendmarc[7484]: E48478DCB7: SPF(mailfrom): pass
+Jun  4 09:14:00 mail opendmarc[7484]: E48478DCB7: DKIM: pass
+Jun  4 09:14:00 mail opendmarc[7484]: E48478DCB7: DMARC: pass
+Jun  4 09:14:00 mail postfix/qmgr[7485]: E48478DCB7: from=<manager6@gov-client.ru>, size=138870, nrcpt=1 (queue active)
+Jun  4 09:14:00 mail postfix/smtp[7486]: E48478DCB7: to=<user6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:16:00 mail postfix/smtpd[2489]: connect from mx3.gov-client.ru[203.0.113.27]
+Jun  4 09:16:00 mail postfix/smtpd[2489]: 1345D2CCE8: client=mx3.gov-client.ru[203.0.113.27], helo=<mx3.gov-client.ru>
+Jun  4 09:16:00 mail postfix/cleanup[2490]: 1345D2CCE8: message-id=<1345d2cce8@mx3.gov-client.ru>
+Jun  4 09:16:00 mail postfix/cleanup[2490]: 1345D2CCE8: warning: header Subject: Ответ на ваш запрос from mx3.gov-client.ru[203.0.113.27]
+Jun  4 09:16:00 mail opendmarc[2491]: 1345D2CCE8: SPF(mailfrom): pass
+Jun  4 09:16:00 mail opendmarc[2491]: 1345D2CCE8: DKIM: pass
+Jun  4 09:16:00 mail opendmarc[2491]: 1345D2CCE8: DMARC: pass
+Jun  4 09:16:00 mail postfix/qmgr[2492]: 1345D2CCE8: from=<manager0@gov-client.ru>, size=137372, nrcpt=1 (queue active)
+Jun  4 09:16:00 mail postfix/smtp[2493]: 1345D2CCE8: to=<user7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:18:00 mail postfix/smtpd[2876]: connect from mx0.audit-firm.example[203.0.113.28]
+Jun  4 09:18:00 mail postfix/smtpd[2876]: 8A39D5E085: client=mx0.audit-firm.example[203.0.113.28], helo=<mx0.audit-firm.example>
+Jun  4 09:18:00 mail postfix/cleanup[2877]: 8A39D5E085: message-id=<8a39d5e085@mx0.audit-firm.example>
+Jun  4 09:18:00 mail postfix/cleanup[2877]: 8A39D5E085: warning: header Subject: Договор на согласование from mx0.audit-firm.example[203.0.113.28]
+Jun  4 09:18:00 mail opendmarc[2878]: 8A39D5E085: SPF(mailfrom): pass
+Jun  4 09:18:00 mail opendmarc[2878]: 8A39D5E085: DKIM: pass
+Jun  4 09:18:00 mail opendmarc[2878]: 8A39D5E085: DMARC: pass
+Jun  4 09:18:00 mail postfix/qmgr[2879]: 8A39D5E085: from=<manager1@audit-firm.example>, size=186332, nrcpt=1 (queue active)
+Jun  4 09:18:00 mail postfix/smtp[2880]: 8A39D5E085: to=<user0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:20:00 mail postfix/smtpd[5889]: connect from mx1.audit-firm.example[203.0.113.29]
+Jun  4 09:20:00 mail postfix/smtpd[5889]: 64B50AF03B: client=mx1.audit-firm.example[203.0.113.29], helo=<mx1.audit-firm.example>
+Jun  4 09:20:00 mail postfix/cleanup[5890]: 64B50AF03B: message-id=<64b50af03b@mx1.audit-firm.example>
+Jun  4 09:20:00 mail postfix/cleanup[5890]: 64B50AF03B: warning: header Subject: Счёт-фактура за май from mx1.audit-firm.example[203.0.113.29]
+Jun  4 09:20:00 mail opendmarc[5891]: 64B50AF03B: SPF(mailfrom): pass
+Jun  4 09:20:00 mail opendmarc[5891]: 64B50AF03B: DKIM: pass
+Jun  4 09:20:00 mail opendmarc[5891]: 64B50AF03B: DMARC: pass
+Jun  4 09:20:00 mail postfix/qmgr[5892]: 64B50AF03B: from=<manager2@audit-firm.example>, size=236201, nrcpt=1 (queue active)
+Jun  4 09:20:00 mail postfix/smtp[5893]: 64B50AF03B: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:22:00 mail postfix/smtpd[4946]: connect from mx2.supplier.example[203.0.113.30]
+Jun  4 09:22:00 mail postfix/smtpd[4946]: 22F244F58D: client=mx2.supplier.example[203.0.113.30], helo=<mx2.supplier.example>
+Jun  4 09:22:00 mail postfix/cleanup[4947]: 22F244F58D: message-id=<22f244f58d@mx2.supplier.example>
+Jun  4 09:22:00 mail postfix/cleanup[4947]: 22F244F58D: warning: header Subject: Коммерческое предложение from mx2.supplier.example[203.0.113.30]
+Jun  4 09:22:00 mail opendmarc[4948]: 22F244F58D: SPF(mailfrom): pass
+Jun  4 09:22:00 mail opendmarc[4948]: 22F244F58D: DKIM: pass
+Jun  4 09:22:00 mail opendmarc[4948]: 22F244F58D: DMARC: pass
+Jun  4 09:22:00 mail postfix/qmgr[4949]: 22F244F58D: from=<manager3@supplier.example>, size=23184, nrcpt=1 (queue active)
+Jun  4 09:22:00 mail postfix/smtp[4950]: 22F244F58D: to=<user2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:24:00 mail postfix/smtpd[4295]: connect from mx3.gov-client.ru[203.0.113.31]
+Jun  4 09:24:00 mail postfix/smtpd[4295]: 9CBEE3772A: client=mx3.gov-client.ru[203.0.113.31], helo=<mx3.gov-client.ru>
+Jun  4 09:24:00 mail postfix/cleanup[4296]: 9CBEE3772A: message-id=<9cbee3772a@mx3.gov-client.ru>
+Jun  4 09:24:00 mail postfix/cleanup[4296]: 9CBEE3772A: warning: header Subject: Ответ на ваш запрос from mx3.gov-client.ru[203.0.113.31]
+Jun  4 09:24:00 mail opendmarc[4297]: 9CBEE3772A: SPF(mailfrom): pass
+Jun  4 09:24:00 mail opendmarc[4297]: 9CBEE3772A: DKIM: pass
+Jun  4 09:24:00 mail opendmarc[4297]: 9CBEE3772A: DMARC: pass
+Jun  4 09:24:00 mail postfix/qmgr[4298]: 9CBEE3772A: from=<manager4@gov-client.ru>, size=205988, nrcpt=1 (queue active)
+Jun  4 09:24:00 mail postfix/smtp[4299]: 9CBEE3772A: to=<user3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:26:00 mail postfix/smtpd[4770]: connect from mx0.partner.com[203.0.113.32]
+Jun  4 09:26:00 mail postfix/smtpd[4770]: 7021721A27: client=mx0.partner.com[203.0.113.32], helo=<mx0.partner.com>
+Jun  4 09:26:00 mail postfix/cleanup[4771]: 7021721A27: message-id=<7021721a27@mx0.partner.com>
+Jun  4 09:26:00 mail postfix/cleanup[4771]: 7021721A27: warning: header Subject: Уточнение по поставке from mx0.partner.com[203.0.113.32]
+Jun  4 09:26:00 mail opendmarc[4772]: 7021721A27: SPF(mailfrom): pass
+Jun  4 09:26:00 mail opendmarc[4772]: 7021721A27: DKIM: pass
+Jun  4 09:26:00 mail opendmarc[4772]: 7021721A27: DMARC: pass
+Jun  4 09:26:00 mail postfix/qmgr[4773]: 7021721A27: from=<manager5@partner.com>, size=153207, nrcpt=1 (queue active)
+Jun  4 09:26:00 mail postfix/smtp[4774]: 7021721A27: to=<user4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:28:00 mail postfix/smtpd[4510]: connect from mx1.supplier.example[203.0.113.33]
+Jun  4 09:28:00 mail postfix/smtpd[4510]: 4F7FD633DB: client=mx1.supplier.example[203.0.113.33], helo=<mx1.supplier.example>
+Jun  4 09:28:00 mail postfix/cleanup[4511]: 4F7FD633DB: message-id=<4f7fd633db@mx1.supplier.example>
+Jun  4 09:28:00 mail postfix/cleanup[4511]: 4F7FD633DB: warning: header Subject: График отгрузок from mx1.supplier.example[203.0.113.33]
+Jun  4 09:28:00 mail opendmarc[4512]: 4F7FD633DB: SPF(mailfrom): pass
+Jun  4 09:28:00 mail opendmarc[4512]: 4F7FD633DB: DKIM: pass
+Jun  4 09:28:00 mail opendmarc[4512]: 4F7FD633DB: DMARC: pass
+Jun  4 09:28:00 mail postfix/qmgr[4513]: 4F7FD633DB: from=<manager6@supplier.example>, size=135248, nrcpt=1 (queue active)
+Jun  4 09:28:00 mail postfix/smtp[4514]: 4F7FD633DB: to=<user5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:30:00 mail postfix/smtpd[1887]: connect from mx2.logistics.example[203.0.113.34]
+Jun  4 09:30:00 mail postfix/smtpd[1887]: 31CA3766E4: client=mx2.logistics.example[203.0.113.34], helo=<mx2.logistics.example>
+Jun  4 09:30:00 mail postfix/cleanup[1888]: 31CA3766E4: message-id=<31ca3766e4@mx2.logistics.example>
+Jun  4 09:30:00 mail postfix/cleanup[1888]: 31CA3766E4: warning: header Subject: Приглашение на вебинар from mx2.logistics.example[203.0.113.34]
+Jun  4 09:30:00 mail opendmarc[1889]: 31CA3766E4: SPF(mailfrom): pass
+Jun  4 09:30:00 mail opendmarc[1889]: 31CA3766E4: DKIM: pass
+Jun  4 09:30:00 mail opendmarc[1889]: 31CA3766E4: DMARC: pass
+Jun  4 09:30:00 mail postfix/qmgr[1890]: 31CA3766E4: from=<manager0@logistics.example>, size=130427, nrcpt=1 (queue active)
+Jun  4 09:30:00 mail postfix/smtp[1891]: 31CA3766E4: to=<user6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:32:00 mail postfix/smtpd[8579]: connect from mx3.logistics.example[203.0.113.35]
+Jun  4 09:32:00 mail postfix/smtpd[8579]: 72E310275D: client=mx3.logistics.example[203.0.113.35], helo=<mx3.logistics.example>
+Jun  4 09:32:00 mail postfix/cleanup[8580]: 72E310275D: message-id=<72e310275d@mx3.logistics.example>
+Jun  4 09:32:00 mail postfix/cleanup[8580]: 72E310275D: warning: header Subject: Протокол совещания from mx3.logistics.example[203.0.113.35]
+Jun  4 09:32:00 mail opendmarc[8581]: 72E310275D: SPF(mailfrom): pass
+Jun  4 09:32:00 mail opendmarc[8581]: 72E310275D: DKIM: pass
+Jun  4 09:32:00 mail opendmarc[8581]: 72E310275D: DMARC: pass
+Jun  4 09:32:00 mail postfix/qmgr[8582]: 72E310275D: from=<manager1@logistics.example>, size=81018, nrcpt=1 (queue active)
+Jun  4 09:32:00 mail postfix/smtp[8583]: 72E310275D: to=<user7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:34:00 mail postfix/smtpd[7570]: connect from mx0.logistics.example[203.0.113.36]
+Jun  4 09:34:00 mail postfix/smtpd[7570]: 15C0C8E9DF: client=mx0.logistics.example[203.0.113.36], helo=<mx0.logistics.example>
+Jun  4 09:34:00 mail postfix/cleanup[7571]: 15C0C8E9DF: message-id=<15c0c8e9df@mx0.logistics.example>
+Jun  4 09:34:00 mail postfix/cleanup[7571]: 15C0C8E9DF: warning: header Subject: Обновление прайс-листа from mx0.logistics.example[203.0.113.36]
+Jun  4 09:34:00 mail opendmarc[7572]: 15C0C8E9DF: SPF(mailfrom): pass
+Jun  4 09:34:00 mail opendmarc[7572]: 15C0C8E9DF: DKIM: pass
+Jun  4 09:34:00 mail opendmarc[7572]: 15C0C8E9DF: DMARC: pass
+Jun  4 09:34:00 mail postfix/qmgr[7573]: 15C0C8E9DF: from=<manager2@logistics.example>, size=64032, nrcpt=1 (queue active)
+Jun  4 09:34:00 mail postfix/smtp[7574]: 15C0C8E9DF: to=<user0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:36:00 mail postfix/smtpd[4566]: connect from mx1.gov-client.ru[203.0.113.37]
+Jun  4 09:36:00 mail postfix/smtpd[4566]: 11A11F5125: client=mx1.gov-client.ru[203.0.113.37], helo=<mx1.gov-client.ru>
+Jun  4 09:36:00 mail postfix/cleanup[4567]: 11A11F5125: message-id=<11a11f5125@mx1.gov-client.ru>
+Jun  4 09:36:00 mail postfix/cleanup[4567]: 11A11F5125: warning: header Subject: Коммерческое предложение from mx1.gov-client.ru[203.0.113.37]
+Jun  4 09:36:00 mail opendmarc[4568]: 11A11F5125: SPF(mailfrom): pass
+Jun  4 09:36:00 mail opendmarc[4568]: 11A11F5125: DKIM: pass
+Jun  4 09:36:00 mail opendmarc[4568]: 11A11F5125: DMARC: pass
+Jun  4 09:36:00 mail postfix/qmgr[4569]: 11A11F5125: from=<manager3@gov-client.ru>, size=85780, nrcpt=1 (queue active)
+Jun  4 09:36:00 mail postfix/smtp[4570]: 11A11F5125: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:38:00 mail postfix/smtpd[4853]: connect from mx2.partner.com[203.0.113.38]
+Jun  4 09:38:00 mail postfix/smtpd[4853]: C3712DA86A: client=mx2.partner.com[203.0.113.38], helo=<mx2.partner.com>
+Jun  4 09:38:00 mail postfix/cleanup[4854]: C3712DA86A: message-id=<c3712da86a@mx2.partner.com>
+Jun  4 09:38:00 mail postfix/cleanup[4854]: C3712DA86A: warning: header Subject: Уточнение по поставке from mx2.partner.com[203.0.113.38]
+Jun  4 09:38:00 mail opendmarc[4855]: C3712DA86A: SPF(mailfrom): pass
+Jun  4 09:38:00 mail opendmarc[4855]: C3712DA86A: DKIM: pass
+Jun  4 09:38:00 mail opendmarc[4855]: C3712DA86A: DMARC: pass
+Jun  4 09:38:00 mail postfix/qmgr[4856]: C3712DA86A: from=<manager4@partner.com>, size=25815, nrcpt=1 (queue active)
+Jun  4 09:38:00 mail postfix/smtp[4857]: C3712DA86A: to=<user2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:40:00 mail postfix/smtpd[3144]: connect from mx3.gov-client.ru[203.0.113.39]
+Jun  4 09:40:00 mail postfix/smtpd[3144]: 9EA20E3268: client=mx3.gov-client.ru[203.0.113.39], helo=<mx3.gov-client.ru>
+Jun  4 09:40:00 mail postfix/cleanup[3145]: 9EA20E3268: message-id=<9ea20e3268@mx3.gov-client.ru>
+Jun  4 09:40:00 mail postfix/cleanup[3145]: 9EA20E3268: warning: header Subject: Акт выполненных работ from mx3.gov-client.ru[203.0.113.39]
+Jun  4 09:40:00 mail opendmarc[3146]: 9EA20E3268: SPF(mailfrom): pass
+Jun  4 09:40:00 mail opendmarc[3146]: 9EA20E3268: DKIM: pass
+Jun  4 09:40:00 mail opendmarc[3146]: 9EA20E3268: DMARC: pass
+Jun  4 09:40:00 mail postfix/qmgr[3147]: 9EA20E3268: from=<manager5@gov-client.ru>, size=111752, nrcpt=1 (queue active)
+Jun  4 09:40:00 mail postfix/smtp[3148]: 9EA20E3268: to=<user3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:42:00 mail postfix/smtpd[2127]: connect from mx0.gov-client.ru[203.0.113.40]
+Jun  4 09:42:00 mail postfix/smtpd[2127]: 7B95E90934: client=mx0.gov-client.ru[203.0.113.40], helo=<mx0.gov-client.ru>
+Jun  4 09:42:00 mail postfix/cleanup[2128]: 7B95E90934: message-id=<7b95e90934@mx0.gov-client.ru>
+Jun  4 09:42:00 mail postfix/cleanup[2128]: 7B95E90934: warning: header Subject: Отчёт за квартал from mx0.gov-client.ru[203.0.113.40]
+Jun  4 09:42:00 mail opendmarc[2129]: 7B95E90934: SPF(mailfrom): pass
+Jun  4 09:42:00 mail opendmarc[2129]: 7B95E90934: DKIM: pass
+Jun  4 09:42:00 mail opendmarc[2129]: 7B95E90934: DMARC: pass
+Jun  4 09:42:00 mail postfix/qmgr[2130]: 7B95E90934: from=<manager6@gov-client.ru>, size=238913, nrcpt=1 (queue active)
+Jun  4 09:42:00 mail postfix/smtp[2131]: 7B95E90934: to=<user4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:44:00 mail postfix/smtpd[2753]: connect from mx1.supplier.example[203.0.113.41]
+Jun  4 09:44:00 mail postfix/smtpd[2753]: 4896A68F81: client=mx1.supplier.example[203.0.113.41], helo=<mx1.supplier.example>
+Jun  4 09:44:00 mail postfix/cleanup[2754]: 4896A68F81: message-id=<4896a68f81@mx1.supplier.example>
+Jun  4 09:44:00 mail postfix/cleanup[2754]: 4896A68F81: warning: header Subject: Счёт-фактура за май from mx1.supplier.example[203.0.113.41]
+Jun  4 09:44:00 mail opendmarc[2755]: 4896A68F81: SPF(mailfrom): pass
+Jun  4 09:44:00 mail opendmarc[2755]: 4896A68F81: DKIM: pass
+Jun  4 09:44:00 mail opendmarc[2755]: 4896A68F81: DMARC: pass
+Jun  4 09:44:00 mail postfix/qmgr[2756]: 4896A68F81: from=<manager0@supplier.example>, size=241232, nrcpt=1 (queue active)
+Jun  4 09:44:00 mail postfix/smtp[2757]: 4896A68F81: to=<user5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:46:00 mail postfix/smtpd[5533]: connect from mx2.partner.com[203.0.113.42]
+Jun  4 09:46:00 mail postfix/smtpd[5533]: 10A485ED03: client=mx2.partner.com[203.0.113.42], helo=<mx2.partner.com>
+Jun  4 09:46:00 mail postfix/cleanup[5534]: 10A485ED03: message-id=<10a485ed03@mx2.partner.com>
+Jun  4 09:46:00 mail postfix/cleanup[5534]: 10A485ED03: warning: header Subject: График отгрузок from mx2.partner.com[203.0.113.42]
+Jun  4 09:46:00 mail opendmarc[5535]: 10A485ED03: SPF(mailfrom): pass
+Jun  4 09:46:00 mail opendmarc[5535]: 10A485ED03: DKIM: pass
+Jun  4 09:46:00 mail opendmarc[5535]: 10A485ED03: DMARC: pass
+Jun  4 09:46:00 mail postfix/qmgr[5536]: 10A485ED03: from=<manager1@partner.com>, size=119037, nrcpt=1 (queue active)
+Jun  4 09:46:00 mail postfix/smtp[5537]: 10A485ED03: to=<user6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:48:00 mail postfix/smtpd[3442]: connect from mx3.partner.com[203.0.113.43]
+Jun  4 09:48:00 mail postfix/smtpd[3442]: 1B4D419B1B: client=mx3.partner.com[203.0.113.43], helo=<mx3.partner.com>
+Jun  4 09:48:00 mail postfix/cleanup[3443]: 1B4D419B1B: message-id=<1b4d419b1b@mx3.partner.com>
+Jun  4 09:48:00 mail postfix/cleanup[3443]: 1B4D419B1B: warning: header Subject: Согласование сметы from mx3.partner.com[203.0.113.43]
+Jun  4 09:48:00 mail opendmarc[3444]: 1B4D419B1B: SPF(mailfrom): pass
+Jun  4 09:48:00 mail opendmarc[3444]: 1B4D419B1B: DKIM: pass
+Jun  4 09:48:00 mail opendmarc[3444]: 1B4D419B1B: DMARC: pass
+Jun  4 09:48:00 mail postfix/qmgr[3445]: 1B4D419B1B: from=<manager2@partner.com>, size=244959, nrcpt=1 (queue active)
+Jun  4 09:48:00 mail postfix/smtp[3446]: 1B4D419B1B: to=<user7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:50:00 mail postfix/smtpd[2684]: connect from mx0.gov-client.ru[203.0.113.44]
+Jun  4 09:50:00 mail postfix/smtpd[2684]: BD4755D05A: client=mx0.gov-client.ru[203.0.113.44], helo=<mx0.gov-client.ru>
+Jun  4 09:50:00 mail postfix/cleanup[2685]: BD4755D05A: message-id=<bd4755d05a@mx0.gov-client.ru>
+Jun  4 09:50:00 mail postfix/cleanup[2685]: BD4755D05A: warning: header Subject: График отгрузок from mx0.gov-client.ru[203.0.113.44]
+Jun  4 09:50:00 mail opendmarc[2686]: BD4755D05A: SPF(mailfrom): pass
+Jun  4 09:50:00 mail opendmarc[2686]: BD4755D05A: DKIM: pass
+Jun  4 09:50:00 mail opendmarc[2686]: BD4755D05A: DMARC: pass
+Jun  4 09:50:00 mail postfix/qmgr[2687]: BD4755D05A: from=<manager3@gov-client.ru>, size=73412, nrcpt=1 (queue active)
+Jun  4 09:50:00 mail postfix/smtp[2688]: BD4755D05A: to=<user0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:52:00 mail postfix/smtpd[5065]: connect from mx1.logistics.example[203.0.113.45]
+Jun  4 09:52:00 mail postfix/smtpd[5065]: 853C1F76EB: client=mx1.logistics.example[203.0.113.45], helo=<mx1.logistics.example>
+Jun  4 09:52:00 mail postfix/cleanup[5066]: 853C1F76EB: message-id=<853c1f76eb@mx1.logistics.example>
+Jun  4 09:52:00 mail postfix/cleanup[5066]: 853C1F76EB: warning: header Subject: График отгрузок from mx1.logistics.example[203.0.113.45]
+Jun  4 09:52:00 mail opendmarc[5067]: 853C1F76EB: SPF(mailfrom): pass
+Jun  4 09:52:00 mail opendmarc[5067]: 853C1F76EB: DKIM: pass
+Jun  4 09:52:00 mail opendmarc[5067]: 853C1F76EB: DMARC: pass
+Jun  4 09:52:00 mail postfix/qmgr[5068]: 853C1F76EB: from=<manager4@logistics.example>, size=234509, nrcpt=1 (queue active)
+Jun  4 09:52:00 mail postfix/smtp[5069]: 853C1F76EB: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:54:00 mail postfix/smtpd[1387]: connect from mx2.supplier.example[203.0.113.46]
+Jun  4 09:54:00 mail postfix/smtpd[1387]: 6CA828BCA0: client=mx2.supplier.example[203.0.113.46], helo=<mx2.supplier.example>
+Jun  4 09:54:00 mail postfix/cleanup[1388]: 6CA828BCA0: message-id=<6ca828bca0@mx2.supplier.example>
+Jun  4 09:54:00 mail postfix/cleanup[1388]: 6CA828BCA0: warning: header Subject: Коммерческое предложение from mx2.supplier.example[203.0.113.46]
+Jun  4 09:54:00 mail opendmarc[1389]: 6CA828BCA0: SPF(mailfrom): pass
+Jun  4 09:54:00 mail opendmarc[1389]: 6CA828BCA0: DKIM: pass
+Jun  4 09:54:00 mail opendmarc[1389]: 6CA828BCA0: DMARC: pass
+Jun  4 09:54:00 mail postfix/qmgr[1390]: 6CA828BCA0: from=<manager5@supplier.example>, size=66438, nrcpt=1 (queue active)
+Jun  4 09:54:00 mail postfix/smtp[1391]: 6CA828BCA0: to=<user2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:56:00 mail postfix/smtpd[5349]: connect from mx3.partner.com[203.0.113.47]
+Jun  4 09:56:00 mail postfix/smtpd[5349]: 13DBAD3C68: client=mx3.partner.com[203.0.113.47], helo=<mx3.partner.com>
+Jun  4 09:56:00 mail postfix/cleanup[5350]: 13DBAD3C68: message-id=<13dbad3c68@mx3.partner.com>
+Jun  4 09:56:00 mail postfix/cleanup[5350]: 13DBAD3C68: warning: header Subject: Акт выполненных работ from mx3.partner.com[203.0.113.47]
+Jun  4 09:56:00 mail opendmarc[5351]: 13DBAD3C68: SPF(mailfrom): pass
+Jun  4 09:56:00 mail opendmarc[5351]: 13DBAD3C68: DKIM: pass
+Jun  4 09:56:00 mail opendmarc[5351]: 13DBAD3C68: DMARC: pass
+Jun  4 09:56:00 mail postfix/qmgr[5352]: 13DBAD3C68: from=<manager6@partner.com>, size=54810, nrcpt=1 (queue active)
+Jun  4 09:56:00 mail postfix/smtp[5353]: 13DBAD3C68: to=<user3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 09:58:00 mail postfix/smtpd[1027]: connect from mx0.partner.com[203.0.113.48]
+Jun  4 09:58:00 mail postfix/smtpd[1027]: 6BD2AA399D: client=mx0.partner.com[203.0.113.48], helo=<mx0.partner.com>
+Jun  4 09:58:00 mail postfix/cleanup[1028]: 6BD2AA399D: message-id=<6bd2aa399d@mx0.partner.com>
+Jun  4 09:58:00 mail postfix/cleanup[1028]: 6BD2AA399D: warning: header Subject: Согласование сметы from mx0.partner.com[203.0.113.48]
+Jun  4 09:58:00 mail opendmarc[1029]: 6BD2AA399D: SPF(mailfrom): pass
+Jun  4 09:58:00 mail opendmarc[1029]: 6BD2AA399D: DKIM: pass
+Jun  4 09:58:00 mail opendmarc[1029]: 6BD2AA399D: DMARC: pass
+Jun  4 09:58:00 mail postfix/qmgr[1030]: 6BD2AA399D: from=<manager0@partner.com>, size=122309, nrcpt=1 (queue active)
+Jun  4 09:58:00 mail postfix/smtp[1031]: 6BD2AA399D: to=<user4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:00:00 mail postfix/smtpd[5844]: connect from mx1.supplier.example[203.0.113.49]
+Jun  4 10:00:00 mail postfix/smtpd[5844]: 46DC59C099: client=mx1.supplier.example[203.0.113.49], helo=<mx1.supplier.example>
+Jun  4 10:00:00 mail postfix/cleanup[5845]: 46DC59C099: message-id=<46dc59c099@mx1.supplier.example>
+Jun  4 10:00:00 mail postfix/cleanup[5845]: 46DC59C099: warning: header Subject: Приглашение на вебинар from mx1.supplier.example[203.0.113.49]
+Jun  4 10:00:00 mail opendmarc[5846]: 46DC59C099: SPF(mailfrom): pass
+Jun  4 10:00:00 mail opendmarc[5846]: 46DC59C099: DKIM: pass
+Jun  4 10:00:00 mail opendmarc[5846]: 46DC59C099: DMARC: pass
+Jun  4 10:00:00 mail postfix/qmgr[5847]: 46DC59C099: from=<manager1@supplier.example>, size=190769, nrcpt=1 (queue active)
+Jun  4 10:00:00 mail postfix/smtp[5848]: 46DC59C099: to=<user5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:02:00 mail postfix/smtpd[6279]: connect from mx2.gov-client.ru[203.0.113.50]
+Jun  4 10:02:00 mail postfix/smtpd[6279]: EEE6F529A2: client=mx2.gov-client.ru[203.0.113.50], helo=<mx2.gov-client.ru>
+Jun  4 10:02:00 mail postfix/cleanup[6280]: EEE6F529A2: message-id=<eee6f529a2@mx2.gov-client.ru>
+Jun  4 10:02:00 mail postfix/cleanup[6280]: EEE6F529A2: warning: header Subject: Приглашение на вебинар from mx2.gov-client.ru[203.0.113.50]
+Jun  4 10:02:00 mail opendmarc[6281]: EEE6F529A2: SPF(mailfrom): pass
+Jun  4 10:02:00 mail opendmarc[6281]: EEE6F529A2: DKIM: pass
+Jun  4 10:02:00 mail opendmarc[6281]: EEE6F529A2: DMARC: pass
+Jun  4 10:02:00 mail postfix/qmgr[6282]: EEE6F529A2: from=<manager2@gov-client.ru>, size=213981, nrcpt=1 (queue active)
+Jun  4 10:02:00 mail postfix/smtp[6283]: EEE6F529A2: to=<user6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:04:00 mail postfix/smtpd[4680]: connect from mx3.gov-client.ru[203.0.113.51]
+Jun  4 10:04:00 mail postfix/smtpd[4680]: 64017F2ED6: client=mx3.gov-client.ru[203.0.113.51], helo=<mx3.gov-client.ru>
+Jun  4 10:04:00 mail postfix/cleanup[4681]: 64017F2ED6: message-id=<64017f2ed6@mx3.gov-client.ru>
+Jun  4 10:04:00 mail postfix/cleanup[4681]: 64017F2ED6: warning: header Subject: График отгрузок from mx3.gov-client.ru[203.0.113.51]
+Jun  4 10:04:00 mail opendmarc[4682]: 64017F2ED6: SPF(mailfrom): pass
+Jun  4 10:04:00 mail opendmarc[4682]: 64017F2ED6: DKIM: pass
+Jun  4 10:04:00 mail opendmarc[4682]: 64017F2ED6: DMARC: pass
+Jun  4 10:04:00 mail postfix/qmgr[4683]: 64017F2ED6: from=<manager3@gov-client.ru>, size=89374, nrcpt=1 (queue active)
+Jun  4 10:04:00 mail postfix/smtp[4684]: 64017F2ED6: to=<user7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:06:00 mail postfix/smtpd[4997]: connect from mx0.logistics.example[203.0.113.52]
+Jun  4 10:06:00 mail postfix/smtpd[4997]: 403D75E173: client=mx0.logistics.example[203.0.113.52], helo=<mx0.logistics.example>
+Jun  4 10:06:00 mail postfix/cleanup[4998]: 403D75E173: message-id=<403d75e173@mx0.logistics.example>
+Jun  4 10:06:00 mail postfix/cleanup[4998]: 403D75E173: warning: header Subject: Обновление прайс-листа from mx0.logistics.example[203.0.113.52]
+Jun  4 10:06:00 mail opendmarc[4999]: 403D75E173: SPF(mailfrom): pass
+Jun  4 10:06:00 mail opendmarc[4999]: 403D75E173: DKIM: pass
+Jun  4 10:06:00 mail opendmarc[4999]: 403D75E173: DMARC: pass
+Jun  4 10:06:00 mail postfix/qmgr[5000]: 403D75E173: from=<manager4@logistics.example>, size=112766, nrcpt=1 (queue active)
+Jun  4 10:06:00 mail postfix/smtp[5001]: 403D75E173: to=<user0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:08:00 mail postfix/smtpd[8612]: connect from mx1.logistics.example[203.0.113.53]
+Jun  4 10:08:00 mail postfix/smtpd[8612]: AEDE5FE878: client=mx1.logistics.example[203.0.113.53], helo=<mx1.logistics.example>
+Jun  4 10:08:00 mail postfix/cleanup[8613]: AEDE5FE878: message-id=<aede5fe878@mx1.logistics.example>
+Jun  4 10:08:00 mail postfix/cleanup[8613]: AEDE5FE878: warning: header Subject: Протокол совещания from mx1.logistics.example[203.0.113.53]
+Jun  4 10:08:00 mail opendmarc[8614]: AEDE5FE878: SPF(mailfrom): pass
+Jun  4 10:08:00 mail opendmarc[8614]: AEDE5FE878: DKIM: pass
+Jun  4 10:08:00 mail opendmarc[8614]: AEDE5FE878: DMARC: pass
+Jun  4 10:08:00 mail postfix/qmgr[8615]: AEDE5FE878: from=<manager5@logistics.example>, size=218086, nrcpt=1 (queue active)
+Jun  4 10:08:00 mail postfix/smtp[8616]: AEDE5FE878: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:10:00 mail postfix/smtpd[4919]: connect from mx2.audit-firm.example[203.0.113.54]
+Jun  4 10:10:00 mail postfix/smtpd[4919]: 8E2978AA24: client=mx2.audit-firm.example[203.0.113.54], helo=<mx2.audit-firm.example>
+Jun  4 10:10:00 mail postfix/cleanup[4920]: 8E2978AA24: message-id=<8e2978aa24@mx2.audit-firm.example>
+Jun  4 10:10:00 mail postfix/cleanup[4920]: 8E2978AA24: warning: header Subject: Обновление прайс-листа from mx2.audit-firm.example[203.0.113.54]
+Jun  4 10:10:00 mail opendmarc[4921]: 8E2978AA24: SPF(mailfrom): pass
+Jun  4 10:10:00 mail opendmarc[4921]: 8E2978AA24: DKIM: pass
+Jun  4 10:10:00 mail opendmarc[4921]: 8E2978AA24: DMARC: pass
+Jun  4 10:10:00 mail postfix/qmgr[4922]: 8E2978AA24: from=<manager6@audit-firm.example>, size=172298, nrcpt=1 (queue active)
+Jun  4 10:10:00 mail postfix/smtp[4923]: 8E2978AA24: to=<user2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:12:00 mail postfix/smtpd[3503]: connect from mx3.gov-client.ru[203.0.113.55]
+Jun  4 10:12:00 mail postfix/smtpd[3503]: 62DDAED16D: client=mx3.gov-client.ru[203.0.113.55], helo=<mx3.gov-client.ru>
+Jun  4 10:12:00 mail postfix/cleanup[3504]: 62DDAED16D: message-id=<62ddaed16d@mx3.gov-client.ru>
+Jun  4 10:12:00 mail postfix/cleanup[3504]: 62DDAED16D: warning: header Subject: Коммерческое предложение from mx3.gov-client.ru[203.0.113.55]
+Jun  4 10:12:00 mail opendmarc[3505]: 62DDAED16D: SPF(mailfrom): pass
+Jun  4 10:12:00 mail opendmarc[3505]: 62DDAED16D: DKIM: pass
+Jun  4 10:12:00 mail opendmarc[3505]: 62DDAED16D: DMARC: pass
+Jun  4 10:12:00 mail postfix/qmgr[3506]: 62DDAED16D: from=<manager0@gov-client.ru>, size=108410, nrcpt=1 (queue active)
+Jun  4 10:12:00 mail postfix/smtp[3507]: 62DDAED16D: to=<user3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:14:00 mail postfix/smtpd[1320]: connect from mx0.logistics.example[203.0.113.56]
+Jun  4 10:14:00 mail postfix/smtpd[1320]: CF0B9CD7F7: client=mx0.logistics.example[203.0.113.56], helo=<mx0.logistics.example>
+Jun  4 10:14:00 mail postfix/cleanup[1321]: CF0B9CD7F7: message-id=<cf0b9cd7f7@mx0.logistics.example>
+Jun  4 10:14:00 mail postfix/cleanup[1321]: CF0B9CD7F7: warning: header Subject: Уточнение по поставке from mx0.logistics.example[203.0.113.56]
+Jun  4 10:14:00 mail opendmarc[1322]: CF0B9CD7F7: SPF(mailfrom): pass
+Jun  4 10:14:00 mail opendmarc[1322]: CF0B9CD7F7: DKIM: pass
+Jun  4 10:14:00 mail opendmarc[1322]: CF0B9CD7F7: DMARC: pass
+Jun  4 10:14:00 mail postfix/qmgr[1323]: CF0B9CD7F7: from=<manager1@logistics.example>, size=190327, nrcpt=1 (queue active)
+Jun  4 10:14:00 mail postfix/smtp[1324]: CF0B9CD7F7: to=<user4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:16:00 mail postfix/smtpd[1475]: connect from mx1.supplier.example[203.0.113.57]
+Jun  4 10:16:00 mail postfix/smtpd[1475]: CAC5E40C02: client=mx1.supplier.example[203.0.113.57], helo=<mx1.supplier.example>
+Jun  4 10:16:00 mail postfix/cleanup[1476]: CAC5E40C02: message-id=<cac5e40c02@mx1.supplier.example>
+Jun  4 10:16:00 mail postfix/cleanup[1476]: CAC5E40C02: warning: header Subject: Приглашение на вебинар from mx1.supplier.example[203.0.113.57]
+Jun  4 10:16:00 mail opendmarc[1477]: CAC5E40C02: SPF(mailfrom): pass
+Jun  4 10:16:00 mail opendmarc[1477]: CAC5E40C02: DKIM: pass
+Jun  4 10:16:00 mail opendmarc[1477]: CAC5E40C02: DMARC: pass
+Jun  4 10:16:00 mail postfix/qmgr[1478]: CAC5E40C02: from=<manager2@supplier.example>, size=135308, nrcpt=1 (queue active)
+Jun  4 10:16:00 mail postfix/smtp[1479]: CAC5E40C02: to=<user5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:18:00 mail postfix/smtpd[8564]: connect from mx2.logistics.example[203.0.113.58]
+Jun  4 10:18:00 mail postfix/smtpd[8564]: 518CA6EAAC: client=mx2.logistics.example[203.0.113.58], helo=<mx2.logistics.example>
+Jun  4 10:18:00 mail postfix/cleanup[8565]: 518CA6EAAC: message-id=<518ca6eaac@mx2.logistics.example>
+Jun  4 10:18:00 mail postfix/cleanup[8565]: 518CA6EAAC: warning: header Subject: Протокол совещания from mx2.logistics.example[203.0.113.58]
+Jun  4 10:18:00 mail opendmarc[8566]: 518CA6EAAC: SPF(mailfrom): pass
+Jun  4 10:18:00 mail opendmarc[8566]: 518CA6EAAC: DKIM: pass
+Jun  4 10:18:00 mail opendmarc[8566]: 518CA6EAAC: DMARC: pass
+Jun  4 10:18:00 mail postfix/qmgr[8567]: 518CA6EAAC: from=<manager3@logistics.example>, size=235239, nrcpt=1 (queue active)
+Jun  4 10:18:00 mail postfix/smtp[8568]: 518CA6EAAC: to=<user6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:20:00 mail postfix/smtpd[2341]: connect from mx3.supplier.example[203.0.113.59]
+Jun  4 10:20:00 mail postfix/smtpd[2341]: F01B721076: client=mx3.supplier.example[203.0.113.59], helo=<mx3.supplier.example>
+Jun  4 10:20:00 mail postfix/cleanup[2342]: F01B721076: message-id=<f01b721076@mx3.supplier.example>
+Jun  4 10:20:00 mail postfix/cleanup[2342]: F01B721076: warning: header Subject: Приглашение на вебинар from mx3.supplier.example[203.0.113.59]
+Jun  4 10:20:00 mail opendmarc[2343]: F01B721076: SPF(mailfrom): pass
+Jun  4 10:20:00 mail opendmarc[2343]: F01B721076: DKIM: pass
+Jun  4 10:20:00 mail opendmarc[2343]: F01B721076: DMARC: pass
+Jun  4 10:20:00 mail postfix/qmgr[2344]: F01B721076: from=<manager4@supplier.example>, size=74131, nrcpt=1 (queue active)
+Jun  4 10:20:00 mail postfix/smtp[2345]: F01B721076: to=<user7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:22:00 mail postfix/smtpd[3496]: connect from workstation[10.0.5.20]
+Jun  4 10:22:00 mail postfix/smtpd[3496]: 74F36E8B53: client=workstation[10.0.5.20], helo=<workstation.corp-mail.ru>, sasl_username=employee0@corp-mail.ru
+Jun  4 10:22:00 mail postfix/cleanup[3497]: 74F36E8B53: message-id=<74f36e8b53@workstation.corp-mail.ru>
+Jun  4 10:22:00 mail postfix/cleanup[3497]: 74F36E8B53: warning: header Subject: Договор на согласование from workstation[10.0.5.20]
+Jun  4 10:22:00 mail postfix/qmgr[3499]: 74F36E8B53: from=<employee0@corp-mail.ru>, size=45719, nrcpt=1 (queue active)
+Jun  4 10:22:00 mail postfix/smtp[3500]: 74F36E8B53: to=<colleague0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:24:00 mail postfix/smtpd[2771]: connect from workstation[10.0.5.21]
+Jun  4 10:24:00 mail postfix/smtpd[2771]: 09CC627393: client=workstation[10.0.5.21], helo=<workstation.corp-mail.ru>, sasl_username=employee1@corp-mail.ru
+Jun  4 10:24:00 mail postfix/cleanup[2772]: 09CC627393: message-id=<09cc627393@workstation.corp-mail.ru>
+Jun  4 10:24:00 mail postfix/cleanup[2772]: 09CC627393: warning: header Subject: Протокол совещания from workstation[10.0.5.21]
+Jun  4 10:24:00 mail postfix/qmgr[2774]: 09CC627393: from=<employee1@corp-mail.ru>, size=25384, nrcpt=1 (queue active)
+Jun  4 10:24:00 mail postfix/smtp[2775]: 09CC627393: to=<colleague1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:26:00 mail postfix/smtpd[1672]: connect from workstation[10.0.5.22]
+Jun  4 10:26:00 mail postfix/smtpd[1672]: BDB2A0DF3D: client=workstation[10.0.5.22], helo=<workstation.corp-mail.ru>, sasl_username=employee2@corp-mail.ru
+Jun  4 10:26:00 mail postfix/cleanup[1673]: BDB2A0DF3D: message-id=<bdb2a0df3d@workstation.corp-mail.ru>
+Jun  4 10:26:00 mail postfix/cleanup[1673]: BDB2A0DF3D: warning: header Subject: Уточнение по поставке from workstation[10.0.5.22]
+Jun  4 10:26:00 mail postfix/qmgr[1675]: BDB2A0DF3D: from=<employee2@corp-mail.ru>, size=56290, nrcpt=1 (queue active)
+Jun  4 10:26:00 mail postfix/smtp[1676]: BDB2A0DF3D: to=<colleague2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:28:00 mail postfix/smtpd[8532]: connect from workstation[10.0.5.23]
+Jun  4 10:28:00 mail postfix/smtpd[8532]: 4D58FED8A7: client=workstation[10.0.5.23], helo=<workstation.corp-mail.ru>, sasl_username=employee3@corp-mail.ru
+Jun  4 10:28:00 mail postfix/cleanup[8533]: 4D58FED8A7: message-id=<4d58fed8a7@workstation.corp-mail.ru>
+Jun  4 10:28:00 mail postfix/cleanup[8533]: 4D58FED8A7: warning: header Subject: Отчёт за квартал from workstation[10.0.5.23]
+Jun  4 10:28:00 mail postfix/qmgr[8535]: 4D58FED8A7: from=<employee3@corp-mail.ru>, size=46653, nrcpt=1 (queue active)
+Jun  4 10:28:00 mail postfix/smtp[8536]: 4D58FED8A7: to=<colleague3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:30:00 mail postfix/smtpd[8385]: connect from workstation[10.0.5.24]
+Jun  4 10:30:00 mail postfix/smtpd[8385]: 7ECA0FA5F6: client=workstation[10.0.5.24], helo=<workstation.corp-mail.ru>, sasl_username=employee4@corp-mail.ru
+Jun  4 10:30:00 mail postfix/cleanup[8386]: 7ECA0FA5F6: message-id=<7eca0fa5f6@workstation.corp-mail.ru>
+Jun  4 10:30:00 mail postfix/cleanup[8386]: 7ECA0FA5F6: warning: header Subject: Счёт-фактура за май from workstation[10.0.5.24]
+Jun  4 10:30:00 mail postfix/qmgr[8388]: 7ECA0FA5F6: from=<employee4@corp-mail.ru>, size=23279, nrcpt=1 (queue active)
+Jun  4 10:30:00 mail postfix/smtp[8389]: 7ECA0FA5F6: to=<colleague4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:32:00 mail postfix/smtpd[5232]: connect from workstation[10.0.5.25]
+Jun  4 10:32:00 mail postfix/smtpd[5232]: A880627DF7: client=workstation[10.0.5.25], helo=<workstation.corp-mail.ru>, sasl_username=employee5@corp-mail.ru
+Jun  4 10:32:00 mail postfix/cleanup[5233]: A880627DF7: message-id=<a880627df7@workstation.corp-mail.ru>
+Jun  4 10:32:00 mail postfix/cleanup[5233]: A880627DF7: warning: header Subject: Отчёт за квартал from workstation[10.0.5.25]
+Jun  4 10:32:00 mail postfix/qmgr[5235]: A880627DF7: from=<employee5@corp-mail.ru>, size=57286, nrcpt=1 (queue active)
+Jun  4 10:32:00 mail postfix/smtp[5236]: A880627DF7: to=<colleague0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:34:00 mail postfix/smtpd[9041]: connect from workstation[10.0.5.26]
+Jun  4 10:34:00 mail postfix/smtpd[9041]: E0297C79BF: client=workstation[10.0.5.26], helo=<workstation.corp-mail.ru>, sasl_username=employee0@corp-mail.ru
+Jun  4 10:34:00 mail postfix/cleanup[9042]: E0297C79BF: message-id=<e0297c79bf@workstation.corp-mail.ru>
+Jun  4 10:34:00 mail postfix/cleanup[9042]: E0297C79BF: warning: header Subject: Согласование сметы from workstation[10.0.5.26]
+Jun  4 10:34:00 mail postfix/qmgr[9044]: E0297C79BF: from=<employee0@corp-mail.ru>, size=36201, nrcpt=1 (queue active)
+Jun  4 10:34:00 mail postfix/smtp[9045]: E0297C79BF: to=<colleague1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:36:00 mail postfix/smtpd[6632]: connect from workstation[10.0.5.27]
+Jun  4 10:36:00 mail postfix/smtpd[6632]: DABE898736: client=workstation[10.0.5.27], helo=<workstation.corp-mail.ru>, sasl_username=employee1@corp-mail.ru
+Jun  4 10:36:00 mail postfix/cleanup[6633]: DABE898736: message-id=<dabe898736@workstation.corp-mail.ru>
+Jun  4 10:36:00 mail postfix/cleanup[6633]: DABE898736: warning: header Subject: Ответ на ваш запрос from workstation[10.0.5.27]
+Jun  4 10:36:00 mail postfix/qmgr[6635]: DABE898736: from=<employee1@corp-mail.ru>, size=39794, nrcpt=1 (queue active)
+Jun  4 10:36:00 mail postfix/smtp[6636]: DABE898736: to=<colleague2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:38:00 mail postfix/smtpd[9779]: connect from workstation[10.0.5.28]
+Jun  4 10:38:00 mail postfix/smtpd[9779]: 566F893697: client=workstation[10.0.5.28], helo=<workstation.corp-mail.ru>, sasl_username=employee2@corp-mail.ru
+Jun  4 10:38:00 mail postfix/cleanup[9780]: 566F893697: message-id=<566f893697@workstation.corp-mail.ru>
+Jun  4 10:38:00 mail postfix/cleanup[9780]: 566F893697: warning: header Subject: Отчёт за квартал from workstation[10.0.5.28]
+Jun  4 10:38:00 mail postfix/qmgr[9782]: 566F893697: from=<employee2@corp-mail.ru>, size=12835, nrcpt=1 (queue active)
+Jun  4 10:38:00 mail postfix/smtp[9783]: 566F893697: to=<colleague3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:40:00 mail postfix/smtpd[5952]: connect from workstation[10.0.5.29]
+Jun  4 10:40:00 mail postfix/smtpd[5952]: 0481194F30: client=workstation[10.0.5.29], helo=<workstation.corp-mail.ru>, sasl_username=employee3@corp-mail.ru
+Jun  4 10:40:00 mail postfix/cleanup[5953]: 0481194F30: message-id=<0481194f30@workstation.corp-mail.ru>
+Jun  4 10:40:00 mail postfix/cleanup[5953]: 0481194F30: warning: header Subject: Отчёт за квартал from workstation[10.0.5.29]
+Jun  4 10:40:00 mail postfix/qmgr[5955]: 0481194F30: from=<employee3@corp-mail.ru>, size=16759, nrcpt=1 (queue active)
+Jun  4 10:40:00 mail postfix/smtp[5956]: 0481194F30: to=<colleague4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:42:00 mail postfix/smtpd[8690]: connect from workstation[10.0.5.30]
+Jun  4 10:42:00 mail postfix/smtpd[8690]: FEA518F32C: client=workstation[10.0.5.30], helo=<workstation.corp-mail.ru>, sasl_username=employee4@corp-mail.ru
+Jun  4 10:42:00 mail postfix/cleanup[8691]: FEA518F32C: message-id=<fea518f32c@workstation.corp-mail.ru>
+Jun  4 10:42:00 mail postfix/cleanup[8691]: FEA518F32C: warning: header Subject: Уточнение по поставке from workstation[10.0.5.30]
+Jun  4 10:42:00 mail postfix/qmgr[8693]: FEA518F32C: from=<employee4@corp-mail.ru>, size=23634, nrcpt=1 (queue active)
+Jun  4 10:42:00 mail postfix/smtp[8694]: FEA518F32C: to=<colleague0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:44:00 mail postfix/smtpd[1878]: connect from workstation[10.0.5.31]
+Jun  4 10:44:00 mail postfix/smtpd[1878]: 449273D7CE: client=workstation[10.0.5.31], helo=<workstation.corp-mail.ru>, sasl_username=employee5@corp-mail.ru
+Jun  4 10:44:00 mail postfix/cleanup[1879]: 449273D7CE: message-id=<449273d7ce@workstation.corp-mail.ru>
+Jun  4 10:44:00 mail postfix/cleanup[1879]: 449273D7CE: warning: header Subject: Обновление прайс-листа from workstation[10.0.5.31]
+Jun  4 10:44:00 mail postfix/qmgr[1881]: 449273D7CE: from=<employee5@corp-mail.ru>, size=9855, nrcpt=1 (queue active)
+Jun  4 10:44:00 mail postfix/smtp[1882]: 449273D7CE: to=<colleague1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:46:00 mail postfix/smtpd[8025]: connect from workstation[10.0.5.32]
+Jun  4 10:46:00 mail postfix/smtpd[8025]: 9136682575: client=workstation[10.0.5.32], helo=<workstation.corp-mail.ru>, sasl_username=employee0@corp-mail.ru
+Jun  4 10:46:00 mail postfix/cleanup[8026]: 9136682575: message-id=<9136682575@workstation.corp-mail.ru>
+Jun  4 10:46:00 mail postfix/cleanup[8026]: 9136682575: warning: header Subject: Обновление прайс-листа from workstation[10.0.5.32]
+Jun  4 10:46:00 mail postfix/qmgr[8028]: 9136682575: from=<employee0@corp-mail.ru>, size=24487, nrcpt=1 (queue active)
+Jun  4 10:46:00 mail postfix/smtp[8029]: 9136682575: to=<colleague2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:48:00 mail postfix/smtpd[3564]: connect from workstation[10.0.5.33]
+Jun  4 10:48:00 mail postfix/smtpd[3564]: 0DEF91799E: client=workstation[10.0.5.33], helo=<workstation.corp-mail.ru>, sasl_username=employee1@corp-mail.ru
+Jun  4 10:48:00 mail postfix/cleanup[3565]: 0DEF91799E: message-id=<0def91799e@workstation.corp-mail.ru>
+Jun  4 10:48:00 mail postfix/cleanup[3565]: 0DEF91799E: warning: header Subject: Ответ на ваш запрос from workstation[10.0.5.33]
+Jun  4 10:48:00 mail postfix/qmgr[3567]: 0DEF91799E: from=<employee1@corp-mail.ru>, size=9919, nrcpt=1 (queue active)
+Jun  4 10:48:00 mail postfix/smtp[3568]: 0DEF91799E: to=<colleague3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:50:00 mail postfix/smtpd[4824]: connect from workstation[10.0.5.34]
+Jun  4 10:50:00 mail postfix/smtpd[4824]: 86D3748421: client=workstation[10.0.5.34], helo=<workstation.corp-mail.ru>, sasl_username=employee2@corp-mail.ru
+Jun  4 10:50:00 mail postfix/cleanup[4825]: 86D3748421: message-id=<86d3748421@workstation.corp-mail.ru>
+Jun  4 10:50:00 mail postfix/cleanup[4825]: 86D3748421: warning: header Subject: Счёт-фактура за май from workstation[10.0.5.34]
+Jun  4 10:50:00 mail postfix/qmgr[4827]: 86D3748421: from=<employee2@corp-mail.ru>, size=50048, nrcpt=1 (queue active)
+Jun  4 10:50:00 mail postfix/smtp[4828]: 86D3748421: to=<colleague4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:52:00 mail postfix/smtpd[6039]: connect from workstation[10.0.6.30]
+Jun  4 10:52:00 mail postfix/smtpd[6039]: 9E3E9C8FE2: client=workstation[10.0.6.30], helo=<workstation.corp-mail.ru>, sasl_username=sales0@corp-mail.ru
+Jun  4 10:52:00 mail postfix/cleanup[6040]: 9E3E9C8FE2: message-id=<9e3e9c8fe2@workstation.corp-mail.ru>
+Jun  4 10:52:00 mail postfix/cleanup[6040]: 9E3E9C8FE2: warning: header Subject: Протокол совещания from workstation[10.0.6.30]
+Jun  4 10:52:00 mail postfix/qmgr[6042]: 9E3E9C8FE2: from=<sales0@corp-mail.ru>, size=113891, nrcpt=1 (queue active)
+Jun  4 10:52:00 mail postfix/smtp[6043]: 9E3E9C8FE2: to=<buyer0@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:54:00 mail postfix/smtpd[8078]: connect from workstation[10.0.6.31]
+Jun  4 10:54:00 mail postfix/smtpd[8078]: A80270815F: client=workstation[10.0.6.31], helo=<workstation.corp-mail.ru>, sasl_username=sales1@corp-mail.ru
+Jun  4 10:54:00 mail postfix/cleanup[8079]: A80270815F: message-id=<a80270815f@workstation.corp-mail.ru>
+Jun  4 10:54:00 mail postfix/cleanup[8079]: A80270815F: warning: header Subject: Уточнение по поставке from workstation[10.0.6.31]
+Jun  4 10:54:00 mail postfix/qmgr[8081]: A80270815F: from=<sales1@corp-mail.ru>, size=15224, nrcpt=1 (queue active)
+Jun  4 10:54:00 mail postfix/smtp[8082]: A80270815F: to=<buyer1@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:56:00 mail postfix/smtpd[8245]: connect from workstation[10.0.6.32]
+Jun  4 10:56:00 mail postfix/smtpd[8245]: 85DF2FBDAA: client=workstation[10.0.6.32], helo=<workstation.corp-mail.ru>, sasl_username=sales2@corp-mail.ru
+Jun  4 10:56:00 mail postfix/cleanup[8246]: 85DF2FBDAA: message-id=<85df2fbdaa@workstation.corp-mail.ru>
+Jun  4 10:56:00 mail postfix/cleanup[8246]: 85DF2FBDAA: warning: header Subject: Ответ на ваш запрос from workstation[10.0.6.32]
+Jun  4 10:56:00 mail postfix/qmgr[8248]: 85DF2FBDAA: from=<sales2@corp-mail.ru>, size=95394, nrcpt=1 (queue active)
+Jun  4 10:56:00 mail postfix/smtp[8249]: 85DF2FBDAA: to=<buyer2@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 10:58:00 mail postfix/smtpd[3634]: connect from workstation[10.0.6.33]
+Jun  4 10:58:00 mail postfix/smtpd[3634]: ADF9C1E2A8: client=workstation[10.0.6.33], helo=<workstation.corp-mail.ru>, sasl_username=sales0@corp-mail.ru
+Jun  4 10:58:00 mail postfix/cleanup[3635]: ADF9C1E2A8: message-id=<adf9c1e2a8@workstation.corp-mail.ru>
+Jun  4 10:58:00 mail postfix/cleanup[3635]: ADF9C1E2A8: warning: header Subject: График отгрузок from workstation[10.0.6.33]
+Jun  4 10:58:00 mail postfix/qmgr[3637]: ADF9C1E2A8: from=<sales0@corp-mail.ru>, size=23710, nrcpt=1 (queue active)
+Jun  4 10:58:00 mail postfix/smtp[3638]: ADF9C1E2A8: to=<buyer3@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:00:00 mail postfix/smtpd[7622]: connect from workstation[10.0.6.34]
+Jun  4 11:00:00 mail postfix/smtpd[7622]: 0ED16BFE16: client=workstation[10.0.6.34], helo=<workstation.corp-mail.ru>, sasl_username=sales1@corp-mail.ru
+Jun  4 11:00:00 mail postfix/cleanup[7623]: 0ED16BFE16: message-id=<0ed16bfe16@workstation.corp-mail.ru>
+Jun  4 11:00:00 mail postfix/cleanup[7623]: 0ED16BFE16: warning: header Subject: Отчёт за квартал from workstation[10.0.6.34]
+Jun  4 11:00:00 mail postfix/qmgr[7625]: 0ED16BFE16: from=<sales1@corp-mail.ru>, size=25194, nrcpt=1 (queue active)
+Jun  4 11:00:00 mail postfix/smtp[7626]: 0ED16BFE16: to=<buyer0@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:02:00 mail postfix/smtpd[3146]: connect from workstation[10.0.6.35]
+Jun  4 11:02:00 mail postfix/smtpd[3146]: 9EF307590D: client=workstation[10.0.6.35], helo=<workstation.corp-mail.ru>, sasl_username=sales2@corp-mail.ru
+Jun  4 11:02:00 mail postfix/cleanup[3147]: 9EF307590D: message-id=<9ef307590d@workstation.corp-mail.ru>
+Jun  4 11:02:00 mail postfix/cleanup[3147]: 9EF307590D: warning: header Subject: Акт выполненных работ from workstation[10.0.6.35]
+Jun  4 11:02:00 mail postfix/qmgr[3149]: 9EF307590D: from=<sales2@corp-mail.ru>, size=81987, nrcpt=1 (queue active)
+Jun  4 11:02:00 mail postfix/smtp[3150]: 9EF307590D: to=<buyer1@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:04:00 mail postfix/smtpd[2858]: connect from workstation[10.0.6.36]
+Jun  4 11:04:00 mail postfix/smtpd[2858]: E34F98DFF7: client=workstation[10.0.6.36], helo=<workstation.corp-mail.ru>, sasl_username=sales0@corp-mail.ru
+Jun  4 11:04:00 mail postfix/cleanup[2859]: E34F98DFF7: message-id=<e34f98dff7@workstation.corp-mail.ru>
+Jun  4 11:04:00 mail postfix/cleanup[2859]: E34F98DFF7: warning: header Subject: Счёт-фактура за май from workstation[10.0.6.36]
+Jun  4 11:04:00 mail postfix/qmgr[2861]: E34F98DFF7: from=<sales0@corp-mail.ru>, size=39451, nrcpt=1 (queue active)
+Jun  4 11:04:00 mail postfix/smtp[2862]: E34F98DFF7: to=<buyer2@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:06:00 mail postfix/smtpd[3369]: connect from workstation[10.0.6.37]
+Jun  4 11:06:00 mail postfix/smtpd[3369]: C6428DA809: client=workstation[10.0.6.37], helo=<workstation.corp-mail.ru>, sasl_username=sales1@corp-mail.ru
+Jun  4 11:06:00 mail postfix/cleanup[3370]: C6428DA809: message-id=<c6428da809@workstation.corp-mail.ru>
+Jun  4 11:06:00 mail postfix/cleanup[3370]: C6428DA809: warning: header Subject: Обновление прайс-листа from workstation[10.0.6.37]
+Jun  4 11:06:00 mail postfix/qmgr[3372]: C6428DA809: from=<sales1@corp-mail.ru>, size=82255, nrcpt=1 (queue active)
+Jun  4 11:06:00 mail postfix/smtp[3373]: C6428DA809: to=<buyer3@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:09:00 mail postfix/smtpd[5891]: connect from workstation[10.0.5.21]
+Jun  4 11:09:00 mail postfix/smtpd[5891]: F4EFBACEA6: client=workstation[10.0.5.21], helo=<workstation.corp-mail.ru>, sasl_username=ivanov@corp-mail.ru
+Jun  4 11:09:00 mail postfix/cleanup[5892]: F4EFBACEA6: message-id=<f4efbacea6@workstation.corp-mail.ru>
+Jun  4 11:09:00 mail postfix/cleanup[5892]: F4EFBACEA6: warning: header Subject: Совещание в 15:00 from workstation[10.0.5.21]
+Jun  4 11:09:00 mail postfix/qmgr[5894]: F4EFBACEA6: from=<ivanov@corp-mail.ru>, size=12000, nrcpt=1 (queue active)
+Jun  4 11:09:00 mail postfix/smtp[5895]: F4EFBACEA6: to=<petrov0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:12:00 mail postfix/smtpd[4912]: connect from workstation[10.0.5.21]
+Jun  4 11:12:00 mail postfix/smtpd[4912]: C7D1AFCC4F: client=workstation[10.0.5.21], helo=<workstation.corp-mail.ru>, sasl_username=ivanov@corp-mail.ru
+Jun  4 11:12:00 mail postfix/cleanup[4913]: C7D1AFCC4F: message-id=<c7d1afcc4f@workstation.corp-mail.ru>
+Jun  4 11:12:00 mail postfix/cleanup[4913]: C7D1AFCC4F: warning: header Subject: Совещание в 15:00 from workstation[10.0.5.21]
+Jun  4 11:12:00 mail postfix/qmgr[4915]: C7D1AFCC4F: from=<ivanov@corp-mail.ru>, size=12000, nrcpt=1 (queue active)
+Jun  4 11:12:00 mail postfix/smtp[4916]: C7D1AFCC4F: to=<petrov1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:15:00 mail postfix/smtpd[1606]: connect from workstation[10.0.5.21]
+Jun  4 11:15:00 mail postfix/smtpd[1606]: 4A3E3E04D4: client=workstation[10.0.5.21], helo=<workstation.corp-mail.ru>, sasl_username=ivanov@corp-mail.ru
+Jun  4 11:15:00 mail postfix/cleanup[1607]: 4A3E3E04D4: message-id=<4a3e3e04d4@workstation.corp-mail.ru>
+Jun  4 11:15:00 mail postfix/cleanup[1607]: 4A3E3E04D4: warning: header Subject: Совещание в 15:00 from workstation[10.0.5.21]
+Jun  4 11:15:00 mail postfix/qmgr[1609]: 4A3E3E04D4: from=<ivanov@corp-mail.ru>, size=12000, nrcpt=1 (queue active)
+Jun  4 11:15:00 mail postfix/smtp[1610]: 4A3E3E04D4: to=<petrov2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:18:00 mail postfix/smtpd[2225]: connect from workstation[10.0.5.21]
+Jun  4 11:18:00 mail postfix/smtpd[2225]: F8AC2ACAF1: client=workstation[10.0.5.21], helo=<workstation.corp-mail.ru>, sasl_username=ivanov@corp-mail.ru
+Jun  4 11:18:00 mail postfix/cleanup[2226]: F8AC2ACAF1: message-id=<f8ac2acaf1@workstation.corp-mail.ru>
+Jun  4 11:18:00 mail postfix/cleanup[2226]: F8AC2ACAF1: warning: header Subject: Совещание в 15:00 from workstation[10.0.5.21]
+Jun  4 11:18:00 mail postfix/qmgr[2228]: F8AC2ACAF1: from=<ivanov@corp-mail.ru>, size=12000, nrcpt=1 (queue active)
+Jun  4 11:18:00 mail postfix/smtp[2229]: F8AC2ACAF1: to=<petrov3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:23:00 mail postfix/smtpd[2121]: connect from unknown[91.214.124.77]
+Jun  4 11:23:00 mail postfix/smtpd[2121]: 7972D33E59: client=unknown[91.214.124.77], helo=<[91.214.124.77]>
+Jun  4 11:23:00 mail postfix/cleanup[2122]: 7972D33E59: message-id=<7972d33e59@[91.214.124.77]>
+Jun  4 11:23:00 mail postfix/cleanup[2122]: 7972D33E59: warning: header Subject: Срочно подтвердите перевод средств контрагенту from unknown[91.214.124.77]
+Jun  4 11:23:00 mail opendmarc[2123]: 7972D33E59: SPF(mailfrom): fail
+Jun  4 11:23:00 mail opendmarc[2123]: 7972D33E59: DKIM: fail
+Jun  4 11:23:00 mail opendmarc[2123]: 7972D33E59: DMARC: fail
+Jun  4 11:23:00 mail postfix/qmgr[2124]: 7972D33E59: from=<ceo@corp-mail.ru>, size=4200, nrcpt=1 (queue active)
+Jun  4 11:23:00 mail postfix/smtp[2125]: 7972D33E59: to=<buhgalter@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:29:00 mail postfix/smtpd[1474]: connect from mail.corp-maill.ru[45.137.21.9]
+Jun  4 11:29:00 mail postfix/smtpd[1474]: 1A19BBD47D: client=mail.corp-maill.ru[45.137.21.9], helo=<mail.corp-maill.ru>
+Jun  4 11:29:00 mail postfix/cleanup[1475]: 1A19BBD47D: message-id=<1a19bbd47d@mail.corp-maill.ru>
+Jun  4 11:29:00 mail postfix/cleanup[1475]: 1A19BBD47D: warning: header Subject: Обновите пароль, иначе аккаунт будет заблокирован from mail.corp-maill.ru[45.137.21.9]
+Jun  4 11:29:00 mail opendmarc[1476]: 1A19BBD47D: SPF(mailfrom): softfail
+Jun  4 11:29:00 mail opendmarc[1476]: 1A19BBD47D: DKIM: fail
+Jun  4 11:29:00 mail opendmarc[1476]: 1A19BBD47D: DMARC: fail
+Jun  4 11:29:00 mail postfix/qmgr[1477]: 1A19BBD47D: from=<support@corp-maill.ru>, size=5300, nrcpt=1 (queue active)
+Jun  4 11:29:00 mail postfix/smtp[1478]: 1A19BBD47D: to=<ivanov@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:36:00 mail postfix/smtpd[3950]: connect from srv.promo-deals.top[193.43.146.12]
+Jun  4 11:36:00 mail postfix/smtpd[3950]: 552C7F47E8: client=srv.promo-deals.top[193.43.146.12], helo=<srv.promo-deals.top>
+Jun  4 11:36:00 mail postfix/cleanup[3951]: 552C7F47E8: message-id=<552c7f47e8@srv.promo-deals.top>
+Jun  4 11:36:00 mail postfix/cleanup[3951]: 552C7F47E8: warning: header Subject: Вы выиграли приз! Подтвердите учетную запись from srv.promo-deals.top[193.43.146.12]
+Jun  4 11:36:00 mail opendmarc[3952]: 552C7F47E8: SPF(mailfrom): fail
+Jun  4 11:36:00 mail opendmarc[3952]: 552C7F47E8: DKIM: none
+Jun  4 11:36:00 mail opendmarc[3952]: 552C7F47E8: DMARC: fail
+Jun  4 11:36:00 mail postfix/qmgr[3953]: 552C7F47E8: from=<win@promo-deals.top>, size=8800, nrcpt=1 (queue active)
+Jun  4 11:36:00 mail postfix/smtp[3954]: 552C7F47E8: to=<user1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtpd[8529]: connect from bulk.spam-net.ru[178.62.99.4]
+Jun  4 11:44:00 mail postfix/smtpd[8529]: 80E952EB9D: client=bulk.spam-net.ru[178.62.99.4], helo=<bulk.spam-net.ru>
+Jun  4 11:44:00 mail postfix/cleanup[8530]: 80E952EB9D: message-id=<80e952eb9d@bulk.spam-net.ru>
+Jun  4 11:44:00 mail postfix/cleanup[8530]: 80E952EB9D: warning: header Subject: Срочно: проверьте вашу почту from bulk.spam-net.ru[178.62.99.4]
+Jun  4 11:44:00 mail opendmarc[8531]: 80E952EB9D: SPF(mailfrom): fail
+Jun  4 11:44:00 mail opendmarc[8531]: 80E952EB9D: DKIM: fail
+Jun  4 11:44:00 mail opendmarc[8531]: 80E952EB9D: DMARC: fail
+Jun  4 11:44:00 mail postfix/qmgr[8532]: 80E952EB9D: from=<noreply@spam-net.ru>, size=15000, nrcpt=20 (queue active)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff0@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff1@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff2@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff3@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff4@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff5@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff6@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff7@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff8@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff9@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff10@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff11@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff12@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff13@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff14@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff15@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff16@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff17@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff18@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:44:00 mail postfix/smtp[8533]: 80E952EB9D: to=<staff19@corp-mail.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 11:54:00 mail postfix/smtpd[5097]: connect from workstation[10.0.5.33]
+Jun  4 11:54:00 mail postfix/smtpd[5097]: E96CF37CB9: client=workstation[10.0.5.33], helo=<workstation.corp-mail.ru>, sasl_username=sidorov@corp-mail.ru
+Jun  4 11:54:00 mail postfix/cleanup[5098]: E96CF37CB9: message-id=<e96cf37cb9@workstation.corp-mail.ru>
+Jun  4 11:54:00 mail postfix/cleanup[5098]: E96CF37CB9: warning: header Subject: Конфиденциально: база клиентов и реквизиты from workstation[10.0.5.33]
+Jun  4 11:54:00 mail postfix/qmgr[5100]: E96CF37CB9: from=<sidorov@corp-mail.ru>, size=2400000, nrcpt=1 (queue active)
+Jun  4 11:54:00 mail postfix/smtp[5101]: E96CF37CB9: to=<sidorov.personal@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 23:15:00 mail postfix/smtpd[5837]: connect from workstation[10.0.5.40]
+Jun  4 23:15:00 mail postfix/smtpd[5837]: 0C801F97B7: client=workstation[10.0.5.40], helo=<workstation.corp-mail.ru>, sasl_username=kadrov@corp-mail.ru
+Jun  4 23:15:00 mail postfix/cleanup[5838]: 0C801F97B7: message-id=<0c801f97b7@workstation.corp-mail.ru>
+Jun  4 23:15:00 mail postfix/cleanup[5838]: 0C801F97B7: warning: header Subject: Архив документов from workstation[10.0.5.40]
+Jun  4 23:15:00 mail postfix/qmgr[5840]: 0C801F97B7: from=<kadrov@corp-mail.ru>, size=9500000, nrcpt=1 (queue active)
+Jun  4 23:15:00 mail postfix/smtp[5841]: 0C801F97B7: to=<external@partner.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:06:00 mail postfix/smtpd[4115]: connect from workstation[10.0.5.51]
+Jun  4 12:06:00 mail postfix/smtpd[4115]: 84319E1B42: client=workstation[10.0.5.51], helo=<workstation.corp-mail.ru>, sasl_username=finotdel@corp-mail.ru
+Jun  4 12:06:00 mail postfix/cleanup[4116]: 84319E1B42: message-id=<84319e1b42@workstation.corp-mail.ru>
+Jun  4 12:06:00 mail postfix/cleanup[4116]: 84319E1B42: warning: header Subject: Оплата по карте 4276 3801 2345 6789 паспорт 45 11 223344 from workstation[10.0.5.51]
+Jun  4 12:06:00 mail postfix/qmgr[4118]: 84319E1B42: from=<finotdel@corp-mail.ru>, size=30000, nrcpt=1 (queue active)
+Jun  4 12:06:00 mail postfix/smtp[4119]: 84319E1B42: to=<partner.pay@yandex.ru>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:08:00 mail postfix/smtpd[5835]: connect from workstation[10.0.5.60]
+Jun  4 12:08:00 mail postfix/smtpd[5835]: AD564B858F: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:08:00 mail postfix/cleanup[5836]: AD564B858F: message-id=<ad564b858f@workstation.corp-mail.ru>
+Jun  4 12:08:00 mail postfix/cleanup[5836]: AD564B858F: warning: header Subject: Выгрузка отчёта часть 1 from workstation[10.0.5.60]
+Jun  4 12:08:00 mail postfix/qmgr[5838]: AD564B858F: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:08:00 mail postfix/smtp[5839]: AD564B858F: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:10:00 mail postfix/smtpd[5835]: connect from workstation[10.0.5.60]
+Jun  4 12:10:00 mail postfix/smtpd[5835]: A3E247CB2C: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:10:00 mail postfix/cleanup[5836]: A3E247CB2C: message-id=<a3e247cb2c@workstation.corp-mail.ru>
+Jun  4 12:10:00 mail postfix/cleanup[5836]: A3E247CB2C: warning: header Subject: Выгрузка отчёта часть 2 from workstation[10.0.5.60]
+Jun  4 12:10:00 mail postfix/qmgr[5838]: A3E247CB2C: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:10:00 mail postfix/smtp[5839]: A3E247CB2C: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:12:00 mail postfix/smtpd[1228]: connect from workstation[10.0.5.60]
+Jun  4 12:12:00 mail postfix/smtpd[1228]: 83EB8CB37F: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:12:00 mail postfix/cleanup[1229]: 83EB8CB37F: message-id=<83eb8cb37f@workstation.corp-mail.ru>
+Jun  4 12:12:00 mail postfix/cleanup[1229]: 83EB8CB37F: warning: header Subject: Выгрузка отчёта часть 3 from workstation[10.0.5.60]
+Jun  4 12:12:00 mail postfix/qmgr[1231]: 83EB8CB37F: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:12:00 mail postfix/smtp[1232]: 83EB8CB37F: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:14:00 mail postfix/smtpd[1410]: connect from workstation[10.0.5.60]
+Jun  4 12:14:00 mail postfix/smtpd[1410]: A72E9D3411: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:14:00 mail postfix/cleanup[1411]: A72E9D3411: message-id=<a72e9d3411@workstation.corp-mail.ru>
+Jun  4 12:14:00 mail postfix/cleanup[1411]: A72E9D3411: warning: header Subject: Выгрузка отчёта часть 4 from workstation[10.0.5.60]
+Jun  4 12:14:00 mail postfix/qmgr[1413]: A72E9D3411: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:14:00 mail postfix/smtp[1414]: A72E9D3411: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:16:00 mail postfix/smtpd[5986]: connect from workstation[10.0.5.60]
+Jun  4 12:16:00 mail postfix/smtpd[5986]: F3374CEBD4: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:16:00 mail postfix/cleanup[5987]: F3374CEBD4: message-id=<f3374cebd4@workstation.corp-mail.ru>
+Jun  4 12:16:00 mail postfix/cleanup[5987]: F3374CEBD4: warning: header Subject: Выгрузка отчёта часть 5 from workstation[10.0.5.60]
+Jun  4 12:16:00 mail postfix/qmgr[5989]: F3374CEBD4: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:16:00 mail postfix/smtp[5990]: F3374CEBD4: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:18:00 mail postfix/smtpd[7797]: connect from workstation[10.0.5.60]
+Jun  4 12:18:00 mail postfix/smtpd[7797]: 3FD81B6EE7: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:18:00 mail postfix/cleanup[7798]: 3FD81B6EE7: message-id=<3fd81b6ee7@workstation.corp-mail.ru>
+Jun  4 12:18:00 mail postfix/cleanup[7798]: 3FD81B6EE7: warning: header Subject: Выгрузка отчёта часть 6 from workstation[10.0.5.60]
+Jun  4 12:18:00 mail postfix/qmgr[7800]: 3FD81B6EE7: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:18:00 mail postfix/smtp[7801]: 3FD81B6EE7: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:20:00 mail postfix/smtpd[6942]: connect from workstation[10.0.5.60]
+Jun  4 12:20:00 mail postfix/smtpd[6942]: 3BB1C863E2: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:20:00 mail postfix/cleanup[6943]: 3BB1C863E2: message-id=<3bb1c863e2@workstation.corp-mail.ru>
+Jun  4 12:20:00 mail postfix/cleanup[6943]: 3BB1C863E2: warning: header Subject: Выгрузка отчёта часть 7 from workstation[10.0.5.60]
+Jun  4 12:20:00 mail postfix/qmgr[6945]: 3BB1C863E2: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:20:00 mail postfix/smtp[6946]: 3BB1C863E2: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:22:00 mail postfix/smtpd[4475]: connect from workstation[10.0.5.60]
+Jun  4 12:22:00 mail postfix/smtpd[4475]: 01A7462667: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:22:00 mail postfix/cleanup[4476]: 01A7462667: message-id=<01a7462667@workstation.corp-mail.ru>
+Jun  4 12:22:00 mail postfix/cleanup[4476]: 01A7462667: warning: header Subject: Выгрузка отчёта часть 8 from workstation[10.0.5.60]
+Jun  4 12:22:00 mail postfix/qmgr[4478]: 01A7462667: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:22:00 mail postfix/smtp[4479]: 01A7462667: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:24:00 mail postfix/smtpd[6383]: connect from workstation[10.0.5.60]
+Jun  4 12:24:00 mail postfix/smtpd[6383]: 4084485304: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:24:00 mail postfix/cleanup[6384]: 4084485304: message-id=<4084485304@workstation.corp-mail.ru>
+Jun  4 12:24:00 mail postfix/cleanup[6384]: 4084485304: warning: header Subject: Выгрузка отчёта часть 9 from workstation[10.0.5.60]
+Jun  4 12:24:00 mail postfix/qmgr[6386]: 4084485304: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:24:00 mail postfix/smtp[6387]: 4084485304: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:26:00 mail postfix/smtpd[1243]: connect from workstation[10.0.5.60]
+Jun  4 12:26:00 mail postfix/smtpd[1243]: B7A05814D3: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:26:00 mail postfix/cleanup[1244]: B7A05814D3: message-id=<b7a05814d3@workstation.corp-mail.ru>
+Jun  4 12:26:00 mail postfix/cleanup[1244]: B7A05814D3: warning: header Subject: Выгрузка отчёта часть 10 from workstation[10.0.5.60]
+Jun  4 12:26:00 mail postfix/qmgr[1246]: B7A05814D3: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:26:00 mail postfix/smtp[1247]: B7A05814D3: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:28:00 mail postfix/smtpd[2041]: connect from workstation[10.0.5.60]
+Jun  4 12:28:00 mail postfix/smtpd[2041]: FEB3E719E0: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:28:00 mail postfix/cleanup[2042]: FEB3E719E0: message-id=<feb3e719e0@workstation.corp-mail.ru>
+Jun  4 12:28:00 mail postfix/cleanup[2042]: FEB3E719E0: warning: header Subject: Выгрузка отчёта часть 11 from workstation[10.0.5.60]
+Jun  4 12:28:00 mail postfix/qmgr[2044]: FEB3E719E0: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:28:00 mail postfix/smtp[2045]: FEB3E719E0: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)
+Jun  4 12:30:00 mail postfix/smtpd[1996]: connect from workstation[10.0.5.60]
+Jun  4 12:30:00 mail postfix/smtpd[1996]: FCD3FE22A4: client=workstation[10.0.5.60], helo=<workstation.corp-mail.ru>, sasl_username=analytik@corp-mail.ru
+Jun  4 12:30:00 mail postfix/cleanup[1997]: FCD3FE22A4: message-id=<fcd3fe22a4@workstation.corp-mail.ru>
+Jun  4 12:30:00 mail postfix/cleanup[1997]: FCD3FE22A4: warning: header Subject: Выгрузка отчёта часть 12 from workstation[10.0.5.60]
+Jun  4 12:30:00 mail postfix/qmgr[1999]: FCD3FE22A4: from=<analytik@corp-mail.ru>, size=480000, nrcpt=1 (queue active)
+Jun  4 12:30:00 mail postfix/smtp[2000]: FCD3FE22A4: to=<collector2024@gmail.com>, relay=mx.dest[10.0.0.9]:25, delay=0.8, status=sent (250 2.0.0 OK)

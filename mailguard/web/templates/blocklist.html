@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Блок-лист IoC · MailGuard{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Блок-лист индикаторов (IoC)</h1>
+  <div class="rules-stat">Всего записей: <b>{{ total }}</b></div>
+</div>
+
+<p class="small">
+  Известные вредоносные индикаторы. При анализе письма сверяются с этим списком;
+  совпадение — сильный сигнал угрозы (правила <code>ioc.match_*</code>). Список
+  можно пополнять вручную, импортом из TI-отчётов или из собранных системой IoC.
+</p>
+
+<div class="grid-2">
+  <div class="panel">
+    <h2>Добавить индикатор</h2>
+    <form method="post" action="{{ url_for('blocklist_add') }}" class="rule-form">
+      <div class="grid-form">
+        <label>Тип
+          <select name="type">
+            <option value="ip">IP-адрес</option>
+            <option value="domain">домен</option>
+            <option value="email">e-mail</option>
+            <option value="file_sha256">SHA-256 файла</option>
+            <option value="subject">тема письма</option>
+          </select>
+        </label>
+        <label>Значение<input name="value" required placeholder="напр. evil.ru"></label>
+        <label>Источник<input name="source" placeholder="напр. Kaspersky"></label>
+      </div>
+      <button class="btn btn-primary" type="submit">Добавить</button>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>Импорт списка</h2>
+    <form method="post" action="{{ url_for('blocklist_import') }}" class="rule-form">
+      <label>Строки вида <code>тип,значение[,источник]</code>
+        <textarea name="data" rows="4"
+          placeholder="ip,203.0.113.7&#10;domain,phish.example&#10;file_sha256,abc..."></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Импортировать</button>
+    </form>
+    <form method="post" action="{{ url_for('blocklist_promote') }}" style="margin-top:10px">
+      <button class="btn" type="submit">➕ Добавить из собранных IoC (high/critical)</button>
+    </form>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Записи блок-листа</h2>
+  <table class="tbl">
+    <thead><tr><th>Тип</th><th>Значение</th><th>Источник</th><th>Добавлено</th></tr></thead>
+    <tbody>
+    {% for e in entries %}
+      <tr>
+        <td>{{ e.type }}</td>
+        <td class="mono">{{ e.value }}</td>
+        <td class="small">{{ e.source }}</td>
+        <td class="small mono">{{ e.added }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="4" class="empty-row">Блок-лист пуст.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

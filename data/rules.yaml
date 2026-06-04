@@ -1,0 +1,18 @@
+rules:
+- id: custom.brand_lure
+  name: Приманка под известный бренд
+  description: Пользовательское правило — упоминание бренда-приманки в теме/теле
+    (Сбербанк, Госуслуги, налоговая) в сочетании с другими признаками фишинга.
+  category: phishing
+  weight: 20
+  confidence: medium
+  enabled: true
+  rtype: keyword
+  field_scope: both
+  patterns:
+  - сбербанк
+  - госуслуги
+  - налоговая
+  - учетную запись
+  mitre:
+  - T1566

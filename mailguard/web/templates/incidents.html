@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Инциденты · MailGuard{% endblock %}
+{% block content %}
+
+<h1>Инциденты {% if category %}· {{ category|cat_ru }}{% endif %}</h1>
+
+<form class="filters" method="get" action="{{ url_for('incidents') }}">
+  <label>Категория:
+    <select name="category" onchange="this.form.submit()">
+      <option value="">все</option>
+      <option value="phishing" {{ 'selected' if category=='phishing' }}>Фишинг</option>
+      <option value="dlp" {{ 'selected' if category=='dlp' }}>Утечки (DLP)</option>
+      <option value="account" {{ 'selected' if category=='account' }}>Аккаунты</option>
+    </select>
+  </label>
+  <label>Серьёзность:
+    <select name="severity" onchange="this.form.submit()">
+      <option value="">все</option>
+      <option value="critical" {{ 'selected' if severity=='critical' }}>критическая</option>
+      <option value="high" {{ 'selected' if severity=='high' }}>высокая</option>
+      <option value="medium" {{ 'selected' if severity=='medium' }}>средняя</option>
+      <option value="low" {{ 'selected' if severity=='low' }}>низкая</option>
+    </select>
+  </label>
+  <span class="count">Найдено: {{ incidents|length }}</span>
+</form>
+
+<table class="tbl">
+  <thead><tr><th>Время</th><th>Серьёзность</th><th>Достов.</th><th>Балл</th>
+             <th>Категория</th><th>Источник лога</th><th>Кратко</th><th></th></tr></thead>
+  <tbody>
+  {% for inc in incidents %}
+    <tr class="sev-{{ inc.severity }}">
+      <td class="mono">{{ inc.timestamp or '—' }}</td>
+      <td><span class="badge badge-{{ inc.severity }}">{{ inc.severity|sev_ru }}</span></td>
+      <td class="small">{{ inc.confidence|conf_ru }}</td>
+      <td class="score">{{ inc.score }}</td>
+      <td>{{ inc.category|cat_ru }}</td>
+      <td><span class="origin">{{ inc.origin or '—' }}</span></td>
+      <td>{{ inc.summary or inc.description }}</td>
+      <td><a href="{{ url_for('incident_detail', incident_id=inc.id) }}">подробнее →</a></td>
+    </tr>
+  {% else %}
+    <tr><td colspan="8" class="empty-row">Инцидентов не найдено.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

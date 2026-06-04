@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Загрузка логов · MailGuard{% endblock %}
+{% block content %}
+
+<h1>Загрузка собственных логов и писем</h1>
+<p class="small">
+  Загрузите свои файлы — система проанализирует их <b>вместе с основным набором
+  и ранее загруженными</b> файлами (результаты <b>добавляются</b>, а не заменяют
+  друг друга). Можно указать любой набор: лог Postfix (SMTP), лог Dovecot (IMAP)
+  и/или письма <code>.eml</code>.
+</p>
+
+<div class="panel">
+  <form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data"
+        class="rule-form">
+    <label>Лог Postfix (SMTP) — текстовый файл
+      <input type="file" name="postfix_log" accept=".log,.txt,text/plain">
+    </label>
+    <label>Лог Dovecot (IMAP) — текстовый файл
+      <input type="file" name="dovecot_log" accept=".log,.txt,text/plain">
+    </label>
+    <label>Письма .eml (можно несколько)
+      <input type="file" name="emails" accept=".eml,message/rfc822" multiple>
+    </label>
+    <button class="btn btn-primary" type="submit">Загрузить и добавить к анализу</button>
+  </form>
+</div>
+
+<form method="post" action="{{ url_for('upload_reset') }}" style="margin-top:12px">
+  <button class="btn" type="submit">Очистить загруженные и сбросить к основному набору</button>
+</form>
+
+<p class="small">
+  Нет своих логов? Сгенерируйте тестовые наборы командами
+  <code>py tools/generate_sample_logs.py</code> и
+  <code>py tools/make_case.py</code> (см. инструкцию по генерации сценариев), или
+  на вкладке «Обзор» нажмите «Запустить анализ логов» для разбора готовых примеров.
+</p>
+
+{% endblock %}

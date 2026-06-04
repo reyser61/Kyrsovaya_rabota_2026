@@ -1,0 +1,27 @@
+Jun  4 09:10:01 mail postfix/smtpd[5001]: connect from mx1.partner.com[203.0.113.21]
+Jun  4 09:10:01 mail postfix/smtpd[5001]: A1000001: client=mx1.partner.com[203.0.113.21], helo=<mx1.partner.com>
+Jun  4 09:10:01 mail postfix/cleanup[5002]: A1000001: message-id=<a1000001@partner.com>
+Jun  4 09:10:01 mail postfix/cleanup[5002]: A1000001: warning: header Subject: Договор на согласование from mx1.partner.com[203.0.113.21]
+Jun  4 09:10:01 mail opendmarc[5003]: A1000001: SPF(mailfrom): pass
+Jun  4 09:10:01 mail opendmarc[5003]: A1000001: DKIM: pass
+Jun  4 09:10:01 mail opendmarc[5003]: A1000001: DMARC: pass
+Jun  4 09:10:02 mail postfix/qmgr[5004]: A1000001: from=<manager@partner.com>, size=45210, nrcpt=1 (queue active)
+Jun  4 09:10:02 mail postfix/smtp[5005]: A1000001: to=<ivanov@corp-mail.ru>, relay=mx[10.0.0.9]:25, delay=0.7, status=sent (250 OK)
+Jun  4 09:41:00 mail postfix/smtpd[5101]: connect from unknown[91.214.124.77]
+Jun  4 09:41:00 mail postfix/smtpd[5101]: B2000002: client=unknown[91.214.124.77], helo=<[91.214.124.77]>
+Jun  4 09:41:00 mail postfix/cleanup[5102]: B2000002: message-id=<b2000002@corp-mail.ru>
+Jun  4 09:41:00 mail postfix/cleanup[5102]: B2000002: warning: header Subject: Срочно подтвердите перевод средств контрагенту from unknown[91.214.124.77]
+Jun  4 09:41:00 mail opendmarc[5103]: B2000002: SPF(mailfrom): fail
+Jun  4 09:41:00 mail opendmarc[5103]: B2000002: DKIM: fail
+Jun  4 09:41:00 mail opendmarc[5103]: B2000002: DMARC: fail
+Jun  4 09:41:01 mail postfix/qmgr[5104]: B2000002: from=<ceo@corp-mail.ru>, size=3120, nrcpt=1 (queue active)
+Jun  4 09:41:01 mail postfix/smtp[5105]: B2000002: to=<buhgalter@corp-mail.ru>, relay=local, delay=0.4, status=sent (250 OK)
+Jun  4 10:05:00 mail postfix/smtpd[5201]: connect from mail.corp-maill.ru[45.137.21.9]
+Jun  4 10:05:00 mail postfix/smtpd[5201]: C3000003: client=mail.corp-maill.ru[45.137.21.9], helo=<mail.corp-maill.ru>
+Jun  4 10:05:00 mail postfix/cleanup[5202]: C3000003: message-id=<c3000003@corp-maill.ru>
+Jun  4 10:05:00 mail postfix/cleanup[5202]: C3000003: warning: header Subject: Обновите пароль, иначе аккаунт будет заблокирован from mail.corp-maill.ru[45.137.21.9]
+Jun  4 10:05:00 mail opendmarc[5203]: C3000003: SPF(mailfrom): softfail
+Jun  4 10:05:00 mail opendmarc[5203]: C3000003: DKIM: fail
+Jun  4 10:05:00 mail opendmarc[5203]: C3000003: DMARC: fail
+Jun  4 10:05:01 mail postfix/qmgr[5204]: C3000003: from=<support@corp-maill.ru>, size=5300, nrcpt=1 (queue active)
+Jun  4 10:05:01 mail postfix/smtp[5205]: C3000003: to=<ivanov@corp-mail.ru>, relay=local, delay=0.5, status=sent (250 OK)

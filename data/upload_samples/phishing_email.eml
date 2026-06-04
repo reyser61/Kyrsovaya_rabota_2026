@@ -1,0 +1,18 @@
+From: "Служба безопасности" <security@sberbank-secure.top>
+To: ivanov@corp-mail.ru
+Reply-To: collector@evil-drop.top
+Subject: Подтвердите учетную запись — срочно
+Date: Wed, 04 Jun 2026 09:20:00 +0300
+Message-ID: <upload-test-eml@sberbank-secure.top>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<p>Уважаемый клиент! Ваша учетная запись будет <b>заблокирована</b> в течение 24 часов.</p>
+<p>Срочно подтвердите учетную запись и введите пароль, иначе доступ будет приостановлен.</p>
+<p>Перейдите по ссылке:
+   <a href="http://malicious-login.ru/verify">https://online.corp-mail.ru/login</a></p>
+<p>Резервный вход: <a href="http://93.184.216.34/secure">резервный сервер</a></p>
+<p>Также подтвердите номер карты и CVV для верификации.</p>
+</body></html>

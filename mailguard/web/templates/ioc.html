@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}IoC · MailGuard{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Индикаторы компрометации (IoC)</h1>
+  <div class="rules-stat">Извлечены из подтверждённых инцидентов · всего: <b>{{ iocs|length }}</b></div>
+</div>
+
+<p class="small">
+  Индикаторы собираются только из инцидентов высокой/критической серьёзности —
+  это «чистая» база подтверждённых IoC для блок-листов, новых правил и сверки с TI.
+</p>
+
+<form class="filters" method="get" action="{{ url_for('ioc') }}">
+  <label>Тип индикатора:
+    <select name="type" onchange="this.form.submit()">
+      <option value="">все</option>
+      {% for key, label in [('ip','IP-адрес'),('sender_email','e-mail отправителя'),
+                            ('sender_domain','домен отправителя'),('url_domain','домен из ссылки'),
+                            ('file_sha256','хэш вложения'),('subject','тема письма')] %}
+        <option value="{{ key }}" {{ 'selected' if type==key }}>{{ label }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <span class="count">Найдено: {{ iocs|length }}</span>
+</form>
+
+<table class="tbl">
+  <thead><tr>
+    <th>Тип</th><th>Значение</th><th>Серьёзность</th><th>Встреч</th>
+    <th>Откуда / почему заведён</th>
+  </tr></thead>
+  <tbody>
+  {% for i in iocs %}
+    <tr class="sev-{{ i.max_severity }}">
+      <td>{{ i.type|ioc_ru }}</td>
+      <td class="mono">{{ i.value }}{% if i.labels %}
+          <div class="small">{{ i.labels }}</div>{% endif %}</td>
+      <td><span class="badge badge-{{ i.max_severity }}">{{ i.max_severity|sev_ru }}</span></td>
+      <td class="score">{{ i.count }}</td>
+      <td class="small">{{ i.context or i.categories }}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="5" class="empty-row">IoC пока не собраны. Запустите анализ.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

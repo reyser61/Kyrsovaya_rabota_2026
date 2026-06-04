@@ -1,0 +1,7 @@
+type,value,source,added
+ip,91.214.124.77,demo-ti,2026-06-01
+ip,178.62.99.4,demo-ti,2026-06-01
+domain,malicious-login.ru,demo-ti,2026-06-01
+domain,sberbank-secure.top,demo-ti,2026-06-01
+domain,promo-deals.top,demo-ti,2026-06-01
+subject,подтвердите учетную запись,demo-ti,2026-06-01

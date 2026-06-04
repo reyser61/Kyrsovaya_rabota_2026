@@ -1,0 +1,41 @@
+Jun  4 09:03:00 mail dovecot: imap-login: Login: user=<user0@corp-mail.ru>, method=PLAIN, rip=10.0.5.30, lip=10.0.0.5, mpid=2538, TLS, session=<48AC9ED336>
+Jun  4 09:06:00 mail dovecot: imap-login: Login: user=<user1@corp-mail.ru>, method=PLAIN, rip=10.0.5.31, lip=10.0.0.5, mpid=5523, TLS, session=<E7DAECD3AD>
+Jun  4 09:09:00 mail dovecot: imap-login: Login: user=<user2@corp-mail.ru>, method=PLAIN, rip=10.0.5.32, lip=10.0.0.5, mpid=4560, TLS, session=<8B4F2222D3>
+Jun  4 09:12:00 mail dovecot: imap-login: Login: user=<user3@corp-mail.ru>, method=PLAIN, rip=10.0.5.33, lip=10.0.0.5, mpid=8099, TLS, session=<B41A3DBD19>
+Jun  4 09:15:00 mail dovecot: imap-login: Login: user=<user4@corp-mail.ru>, method=PLAIN, rip=10.0.5.34, lip=10.0.0.5, mpid=6918, TLS, session=<9B364F73BB>
+Jun  4 09:18:00 mail dovecot: imap-login: Login: user=<user5@corp-mail.ru>, method=PLAIN, rip=10.0.5.35, lip=10.0.0.5, mpid=2941, TLS, session=<87D080589A>
+Jun  4 09:21:00 mail dovecot: imap-login: Login: user=<user6@corp-mail.ru>, method=PLAIN, rip=10.0.5.36, lip=10.0.0.5, mpid=4875, TLS, session=<054C24026C>
+Jun  4 09:24:00 mail dovecot: imap-login: Login: user=<user7@corp-mail.ru>, method=PLAIN, rip=10.0.5.37, lip=10.0.0.5, mpid=5439, TLS, session=<EA5B9A2145>
+Jun  4 09:27:00 mail dovecot: imap-login: Login: user=<user0@corp-mail.ru>, method=PLAIN, rip=10.0.5.38, lip=10.0.0.5, mpid=8180, TLS, session=<128EDFED86>
+Jun  4 09:30:00 mail dovecot: imap-login: Login: user=<user1@corp-mail.ru>, method=PLAIN, rip=10.0.5.39, lip=10.0.0.5, mpid=8184, TLS, session=<3BD39F917C>
+Jun  4 09:33:00 mail dovecot: imap-login: Login: user=<user2@corp-mail.ru>, method=PLAIN, rip=10.0.5.40, lip=10.0.0.5, mpid=6909, TLS, session=<10696489A3>
+Jun  4 09:36:00 mail dovecot: imap-login: Login: user=<user3@corp-mail.ru>, method=PLAIN, rip=10.0.5.41, lip=10.0.0.5, mpid=2063, TLS, session=<FD54C7B2C1>
+Jun  4 09:39:00 mail dovecot: imap-login: Login: user=<user4@corp-mail.ru>, method=PLAIN, rip=10.0.5.42, lip=10.0.0.5, mpid=5573, TLS, session=<0E2ADCD93C>
+Jun  4 09:42:00 mail dovecot: imap-login: Login: user=<user5@corp-mail.ru>, method=PLAIN, rip=10.0.5.43, lip=10.0.0.5, mpid=2170, TLS, session=<A5EB2D37DC>
+Jun  4 09:45:00 mail dovecot: imap-login: Login: user=<user6@corp-mail.ru>, method=PLAIN, rip=10.0.5.44, lip=10.0.0.5, mpid=6292, TLS, session=<2C9A7A5236>
+Jun  4 09:48:00 mail dovecot: imap-login: Login: user=<user7@corp-mail.ru>, method=PLAIN, rip=10.0.5.45, lip=10.0.0.5, mpid=8358, TLS, session=<BB47348654>
+Jun  4 09:51:00 mail dovecot: imap-login: Login: user=<user0@corp-mail.ru>, method=PLAIN, rip=10.0.5.46, lip=10.0.0.5, mpid=8227, TLS, session=<25FEEAA4E2>
+Jun  4 09:54:00 mail dovecot: imap-login: Login: user=<user1@corp-mail.ru>, method=PLAIN, rip=10.0.5.47, lip=10.0.0.5, mpid=5841, TLS, session=<E981B29EE1>
+Jun  4 09:57:00 mail dovecot: imap-login: Login: user=<user2@corp-mail.ru>, method=PLAIN, rip=10.0.5.48, lip=10.0.0.5, mpid=2466, TLS, session=<B922CE1E6A>
+Jun  4 10:00:00 mail dovecot: imap-login: Login: user=<user3@corp-mail.ru>, method=PLAIN, rip=10.0.5.49, lip=10.0.0.5, mpid=6956, TLS, session=<F41E3A2517>
+Jun  4 10:03:00 mail dovecot: imap-login: Login: user=<user4@corp-mail.ru>, method=PLAIN, rip=10.0.5.50, lip=10.0.0.5, mpid=7796, TLS, session=<EE5BB9CDA1>
+Jun  4 10:06:00 mail dovecot: imap-login: Login: user=<user5@corp-mail.ru>, method=PLAIN, rip=10.0.5.51, lip=10.0.0.5, mpid=8465, TLS, session=<A2A3C984A2>
+Jun  4 10:09:00 mail dovecot: imap-login: Login: user=<user6@corp-mail.ru>, method=PLAIN, rip=10.0.5.52, lip=10.0.0.5, mpid=6773, TLS, session=<4B9C429CA4>
+Jun  4 10:12:00 mail dovecot: imap-login: Login: user=<user7@corp-mail.ru>, method=PLAIN, rip=10.0.5.53, lip=10.0.0.5, mpid=7489, TLS, session=<2DB0B956AF>
+Jun  4 10:15:00 mail dovecot: imap-login: Login: user=<user0@corp-mail.ru>, method=PLAIN, rip=10.0.5.54, lip=10.0.0.5, mpid=3572, TLS, session=<7442931A4C>
+Jun  4 10:18:00 mail dovecot: imap-login: Login: user=<user1@corp-mail.ru>, method=PLAIN, rip=10.0.5.55, lip=10.0.0.5, mpid=3263, TLS, session=<555E1DB7E9>
+Jun  4 10:21:00 mail dovecot: imap-login: Login: user=<user2@corp-mail.ru>, method=PLAIN, rip=10.0.5.56, lip=10.0.0.5, mpid=8163, TLS, session=<E779F6BEE9>
+Jun  4 10:24:00 mail dovecot: imap-login: Login: user=<user3@corp-mail.ru>, method=PLAIN, rip=10.0.5.57, lip=10.0.0.5, mpid=8374, TLS, session=<CD56481FB3>
+Jun  4 10:27:00 mail dovecot: imap-login: Login: user=<user4@corp-mail.ru>, method=PLAIN, rip=10.0.5.58, lip=10.0.0.5, mpid=7827, TLS, session=<39258E4D27>
+Jun  4 10:30:00 mail dovecot: imap-login: Login: user=<user5@corp-mail.ru>, method=PLAIN, rip=10.0.5.59, lip=10.0.0.5, mpid=8690, TLS, session=<EB0D1CB7C2>
+Jun  4 02:00:40 mail dovecot: imap-login: Disconnected (auth failed, 1 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:01:20 mail dovecot: imap-login: Disconnected (auth failed, 2 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:02:00 mail dovecot: imap-login: Disconnected (auth failed, 3 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:02:40 mail dovecot: imap-login: Disconnected (auth failed, 4 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:03:20 mail dovecot: imap-login: Disconnected (auth failed, 5 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:04:00 mail dovecot: imap-login: Disconnected (auth failed, 6 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:04:40 mail dovecot: imap-login: Disconnected (auth failed, 7 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:05:10 mail dovecot: imap-login: Login: user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5, mpid=5071, TLS, session=<70A3A4419F>
+Jun  4 14:00:00 mail dovecot: imap-login: Login: user=<ivanov@corp-mail.ru>, method=PLAIN, rip=192.0.2.10, lip=10.0.0.5, mpid=7702, TLS, session=<4FE020864D>
+Jun  4 14:18:00 mail dovecot: imap-login: Login: user=<ivanov@corp-mail.ru>, method=PLAIN, rip=198.51.100.77, lip=10.0.0.5, mpid=2910, TLS, session=<979317DE23>
+Jun  4 11:30:00 mail dovecot: imap-login: Login: user=<petrov@corp-mail.ru>, method=PLAIN, rip=10.0.5.99, lip=10.0.0.5, mpid=8854, session=<F0749D0B7D>

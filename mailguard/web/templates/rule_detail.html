@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Правило {{ r.id }} · MailGuard{% endblock %}
+{% block content %}
+
+<p><a href="{{ url_for('rules') }}">← к списку правил</a></p>
+
+<div class="detail-head">
+  <h1>{{ r.name }}</h1>
+  <div>
+    <span class="badge-soft">{{ r.category|cat_ru }}</span>
+    <span class="badge-soft">вес {{ r.weight }}</span>
+    <span class="badge-soft">достоверность: {{ r.confidence }}</span>
+    <span class="badge badge-{{ 'high' if r.enabled else 'low' }}">
+      {{ 'включено' if r.enabled else 'выключено' }}</span>
+  </div>
+</div>
+
+<table class="kv">
+  <tr><th>Идентификатор</th><td class="mono">{{ r.id }}</td></tr>
+  <tr><th>Описание</th><td>{{ r.description }}</td></tr>
+  <tr><th>Источник</th><td>{{ 'пользовательское' if r.source == 'declarative' else 'встроенное' }}</td></tr>
+  {% if r.mitre %}<tr><th>MITRE ATT&CK</th><td class="mono">{{ r.mitre | join(', ') }}</td></tr>{% endif %}
+  {% if r.rfc %}<tr><th>Стандарты / RFC</th><td class="mono">{{ r.rfc | join(', ') }}</td></tr>{% endif %}
+  {% if r.source == 'declarative' %}
+    <tr><th>Тип</th><td>{{ r.rtype }}</td></tr>
+    <tr><th>Область</th><td>{{ r.field_scope }}</td></tr>
+    <tr><th>Шаблоны</th><td class="mono">{{ r.patterns | join(', ') }}</td></tr>
+  {% endif %}
+</table>
+
+<p><a href="{{ url_for('rules') }}">Управление правилами →</a></p>
+
+{% endblock %}

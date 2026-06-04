@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}Обзор · MailGuard{% endblock %}
+{% block content %}
+
+<div class="page-head">
+  <h1>Обзор угроз</h1>
+  <form method="post" action="{{ url_for('analyze') }}">
+    <button class="btn btn-primary" type="submit">▶ Запустить анализ логов</button>
+  </form>
+</div>
+
+{% if not has_data %}
+  <div class="empty">
+    <p>Данных пока нет. Нажмите «Запустить анализ логов», чтобы обработать
+       тестовые логи Postfix/Dovecot из <code>data/sample_logs/</code>.</p>
+    <p>Сгенерировать тестовые логи: <code>python tools/generate_sample_logs.py</code></p>
+  </div>
+{% else %}
+
+<div class="cards">
+  <div class="card card-total"><div class="card-label">Всего обработано записей</div>
+    <div class="card-num">{{ (stats.total_messages or 0) + (stats.total_imap_events or 0) }}</div>
+    <div class="card-sub">из них помечено: {{ stats.total_incidents }}</div></div>
+  <div class="card"><div class="card-label">Писем SMTP</div>
+    <div class="card-num">{{ stats.total_messages }}</div>
+    <div class="card-sub">вход. {{ stats.inbound }} / исх. {{ stats.outbound }}</div></div>
+  <div class="card"><div class="card-label">Событий IMAP</div>
+    <div class="card-num">{{ stats.total_imap_events }}</div></div>
+  <div class="card"><div class="card-label">Писем .eml</div>
+    <div class="card-num">{{ stats.total_emails or 0 }}</div>
+    <div class="card-sub">вложений: {{ stats.total_attachments or 0 }}</div></div>
+  <div class="card card-danger"><div class="card-label">Всего инцидентов</div>
+    <div class="card-num">{{ stats.total_incidents }}</div></div>
+  <div class="card"><div class="card-label">Фишинг</div>
+    <div class="card-num">{{ stats.by_category.phishing }}</div></div>
+  <div class="card"><div class="card-label">Утечки (DLP)</div>
+    <div class="card-num">{{ stats.by_category.dlp }}</div></div>
+  <div class="card"><div class="card-label">Аккаунты</div>
+    <div class="card-num">{{ stats.by_category.account }}</div></div>
+  <div class="card"><div class="card-label">Активных правил</div>
+    <div class="card-num">{{ stats.rules_enabled or 0 }}</div>
+    <div class="card-sub">из {{ stats.rules_total or 0 }} ·
+      <a href="{{ url_for('rules') }}">панель →</a></div></div>
+  <div class="card"><div class="card-label">Индикаторов (IoC)</div>
+    <div class="card-num">{{ stats.total_iocs or 0 }}</div>
+    <div class="card-sub"><a href="{{ url_for('ioc') }}">база IoC →</a></div></div>
+  <div class="card"><div class="card-label">Блок-лист IoC</div>
+    <div class="card-num">{{ stats.blocklist_size or 0 }}</div>
+    <div class="card-sub"><a href="{{ url_for('blocklist') }}">управление →</a></div></div>
+</div>
+
+<div class="grid-2">
+  <div class="panel">
+    <h2>Инциденты по категориям</h2>
+    <canvas id="catChart" height="200"></canvas>
+  </div>
+  <div class="panel">
+    <h2>По уровню серьёзности</h2>
+    <canvas id="sevChart" height="200"></canvas>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Распределение инцидентов по часам</h2>
+  <canvas id="hourChart" height="90"></canvas>
+</div>
+
+<div class="panel">
+  <h2>Топ-10 опасных инцидентов</h2>
+  <table class="tbl">
+    <thead><tr><th>Серьёзность</th><th>Достов.</th><th>Балл</th><th>Категория</th>
+               <th>Лог</th><th>Кратко</th><th></th></tr></thead>
+    <tbody>
+    {% for inc in top_incidents %}
+      <tr class="sev-{{ inc.severity }}">
+        <td><span class="badge badge-{{ inc.severity }}">{{ inc.severity|sev_ru }}</span></td>
+        <td class="small">{{ inc.confidence|conf_ru }}</td>
+        <td class="score">{{ inc.score }}</td>
+        <td>{{ inc.category|cat_ru }}</td>
+        <td><span class="origin">{{ inc.origin or '—' }}</span></td>
+        <td>{{ inc.summary or inc.description }}</td>
+        <td><a href="{{ url_for('incident_detail', incident_id=inc.id) }}">подробнее →</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const sev = {{ stats.by_severity | tojson }};
+  const cat = {{ stats.by_category | tojson }};
+  const hourly = {{ stats.hourly | tojson }};
+
+  new Chart(document.getElementById('catChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Фишинг', 'Утечки (DLP)', 'Аккаунты'],
+      datasets: [{ data: [cat.phishing, cat.dlp, cat.account],
+                   backgroundColor: ['#dc2626', '#d97706', '#2563eb'] }]
+    }
+  });
+
+  new Chart(document.getElementById('sevChart'), {
+    type: 'bar',
+    data: {
+      labels: ['низкая', 'средняя', 'высокая', 'критическая'],
+      datasets: [{ label: 'Инциденты',
+                   data: [sev.low, sev.medium, sev.high, sev.critical],
+                   backgroundColor: ['#84cc16', '#eab308', '#f97316', '#dc2626'] }]
+    },
+    options: { plugins: { legend: { display: false } } }
+  });
+
+  new Chart(document.getElementById('hourChart'), {
+    type: 'line',
+    data: {
+      labels: Object.keys(hourly),
+      datasets: [{ label: 'Инциденты по часам', data: Object.values(hourly),
+                   borderColor: '#dc2626', backgroundColor: 'rgba(220,38,38,.15)',
+                   fill: true, tension: .3 }]
+    }
+  });
+</script>
+
+{% endif %}
+{% endblock %}

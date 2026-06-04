@@ -1,0 +1,42 @@
+Subject: =?utf-8?b?0JTQvtCz0L7QstC+0YAg0L3QsCDRgdC+0LPQu9Cw0YHQvtCy0LDQvdC4?=
+ =?utf-8?q?=D0=B5?=
+From: manager@partner.com
+To: ivanov@corp-mail.ru
+Date: Thu, 04 Jun 2026 15:19:09 +0300
+Message-ID: <178057554955.21360.2678858904384229368@mail.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0559827852522819348=="
+
+--===============0559827852522819348==
+Content-Type: multipart/alternative;
+ boundary="===============8533586278795785346=="
+
+--===============8533586278795785346==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+0JfQtNGA0LDQstGB0YLQstGD0LnRgtC1ISDQlNC+0LPQvtCy0L7RgCDQstC+INCy0LvQvtC20LXQ
+vdC40LguINCf0L7QtNGA0L7QsdC90L7RgdGC0Lgg0L3QsCDQvdCw0YjQtdC8INGB0LDQudGC0LUu
+Cg==
+
+--===============8533586278795785346==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PHA+0JfQtNGA0LDQstGB0YLQstGD0LnRgtC1ITwvcD4KICAgICAgICA8cD7Q
+n9C+0LTRgNC+0LHQvdC+0YHRgtC4INC90LAgPGEgaHJlZj0iaHR0cHM6Ly9wYXJ0bmVyLmNvbS9j
+b250cmFjdCI+cGFydG5lci5jb208L2E+PC9wPgogICAgICAgIDwvYm9keT48L2h0bWw+Cg==
+
+--===============8533586278795785346==--
+
+--===============0559827852522819348==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80.pdf
+MIME-Version: 1.0
+
+JVBERi0xLjQgZmFrZSBwZGYgY29udGVudA==
+
+--===============0559827852522819348==--

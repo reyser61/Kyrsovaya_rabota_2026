@@ -1,0 +1,12 @@
+Jun  4 08:00:01 mail dovecot: imap-login: Login: user=<user0@corp-mail.ru>, method=PLAIN, rip=10.0.5.31, lip=10.0.0.5, mpid=2101, TLS, session=<s1>
+Jun  4 08:05:11 mail dovecot: imap-login: Login: user=<user1@corp-mail.ru>, method=PLAIN, rip=10.0.5.32, lip=10.0.0.5, mpid=2102, TLS, session=<s2>
+Jun  4 08:12:40 mail dovecot: imap-login: Login: user=<user2@corp-mail.ru>, method=PLAIN, rip=10.0.5.33, lip=10.0.0.5, mpid=2103, TLS, session=<s3>
+Jun  4 02:00:00 mail dovecot: imap-login: Disconnected (auth failed, 1 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:00:40 mail dovecot: imap-login: Disconnected (auth failed, 2 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:01:20 mail dovecot: imap-login: Disconnected (auth failed, 3 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:02:00 mail dovecot: imap-login: Disconnected (auth failed, 4 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:02:40 mail dovecot: imap-login: Disconnected (auth failed, 5 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:03:20 mail dovecot: imap-login: Disconnected (auth failed, 6 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:04:00 mail dovecot: imap-login: Disconnected (auth failed, 7 attempts in 2 secs): user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5
+Jun  4 02:05:30 mail dovecot: imap-login: Login: user=<buhgalter@corp-mail.ru>, method=PLAIN, rip=185.220.101.45, lip=10.0.0.5, mpid=2110, TLS, session=<s9>
+Jun  4 11:30:00 mail dovecot: imap-login: Login: user=<petrov@corp-mail.ru>, method=PLAIN, rip=10.0.5.99, lip=10.0.0.5, mpid=2120, session=<s10>
